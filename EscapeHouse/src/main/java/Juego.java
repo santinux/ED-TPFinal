@@ -188,6 +188,51 @@ public class Juego
                 }
         }
         
+        private void crearHabitacion()
+        {
+                //
+        }
+        
+        private void eliminarHabitacion()
+        {
+                //
+        }
+        
+        private void modificarHabitacion()
+        {
+                //
+        }
+        
+        private void crearDesafio()
+        {
+                //
+        }
+        
+        private void eliminarDesafio()
+        {
+                //
+        }
+        
+        private void modificarDesafio()
+        {
+                //
+        }
+        
+        private void crearEquipo()
+        {
+                //
+        }
+        
+        private void eliminarEquipo()
+        {
+                //
+        }
+        
+        private void modificarEquipo()
+        {
+                //
+        }
+        
         private void mostrarMenuPrincipal()
         {
                 System.out.println("------------[Menú Principal]------------");
@@ -250,7 +295,7 @@ public class Juego
                 System.out.println("1) Ver info de un desafío");
                 System.out.println("2) Ver desafíos resueltos por un equipo");
                 System.out.println("3) Verificar si un equipo resolvió un desafío");
-                System.out.println("4) Ver dasafíos de un tipo con puntaje dentro de un rango");
+                System.out.println("4) Ver desafíos de un tipo con puntaje dentro de un rango");
                 System.out.println("0) Volver al menú principal");
                 System.out.println("----------------------------------------");
         }
