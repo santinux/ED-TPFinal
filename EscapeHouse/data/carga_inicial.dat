@@ -1,0 +1,85 @@
+H;1;Altillo;2;10;false
+H;2;Baño;0;10;false
+H;3;Biblioteca;1;20;false
+H;4;Bodega;-1;20;false
+H;5;Cochera;0;20;true
+H;6;Cocina;0;15;false
+H;7;Comedor;0;20;false
+H;8;Depósito;-1;30;false
+H;9;Despensa;0;20;true
+H;10;Dormitorio principal;1;20;false
+H;11;Dormitorio de huéspedes;1;15;false
+H;12;Escalera;0;10;false
+H;13;Escritorio;1;10;false
+H;14;Gimnasio;0;25;false
+H;15;Invernadero;0;25;true
+H;16;Lavadero;0;10;true
+H;17;Natatorio;0;25;true
+H;18;Pasillo planta baja;0;20;false
+H;19;Pasillo planta alta;1;20;false
+H;20;Quincho;0;30;false
+H;21;Recibidor;0;20;true
+H;22;Sala de Estar;1;20;true
+H;23;Sala de Juegos;1;10;false
+H;24;Sala de Música;1;15;false
+H;25;Sótano;-1;30;false
+E;Los Valientes;400;0;0;0
+E;Los Locos Adams;400;0;0;0
+E;Los Aldeanos;400;0;0;0
+E;Los Paisanos;400;0;0;0
+E;Los Asirios;400;0;0;0
+E;Los Griegos;400;0;0;0
+E;Los Romanos;400;0;0;0
+E;Los Mongoles;400;0;0;0
+E;Los Turcos;400;0;0;0
+E;Los Aztecas;400;0;0;0
+D;98;Sudoku;Matemático
+D;89;Acertijo;Lógico
+D;84;Trabado;Ingenio
+D;77;Crucigrama;Letras
+D;88;Sopa de Letras;Búsqueda
+D;76;Laberinto;Destreza
+D;96;Cálculo Mental;Matemático
+D;87;Torres de Hanoi;Lógico
+D;83;Palillos;Ingenio
+D;78;Anagrama;Letras
+D;86;Busca el Tesoro;Búsqueda
+D;79;Rayuela;Destreza
+D;94;KenKen;Matemático
+D;85;Nonograma;Lógico
+D;82;Escape Mental;Ingenio
+D;80;Palabra Oculta;Letras
+D;81;Mapa Perdido;Búsqueda
+D;75;Penales;Destreza
+D;92;2048;Matemático
+D;91;Mastermind;Lógico
+D;90;Rompecabezas;Ingenio
+D;93;Ahorcado;Letras
+D;97;Objetos Escondidos;Búsqueda
+D;95;Shark Attack;Destreza
+D;400;Ganador;Debug
+P;21;18;10
+P;18;2;40
+P;18;7;45
+P;18;2;40
+P;18;12;45
+P;7;6;40
+P;6;9;45
+P;6;16;40
+P;12;20;45
+P;12;25;40
+P;12;19;45
+P;20;14;40
+P;20;15;45
+P;20;5;40
+P;14;17;45
+P;25;8;60
+P;25;4;65
+P;19;1;50
+P;19;13;55
+P;19;3;50
+P;19;22;55
+P;22;11;50
+P;22;24;55
+P;22;10;50
+P;22;23;55

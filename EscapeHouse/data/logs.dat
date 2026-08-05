@@ -1,0 +1,671 @@
+[05/08/2026-11:04:27] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-11:04:27] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-11:04:27] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-11:04:27] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-11:04:27] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:04:27] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:04:27] - Carga de puerta: 1 -> 2
+[05/08/2026-11:04:27] - Carga de puerta: 2 -> 3
+[05/08/2026-11:56:41] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-11:56:41] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-11:56:41] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-11:56:41] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-11:56:41] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-11:56:41] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-11:56:41] - Carga de puerta: 1 -> 2
+[05/08/2026-11:56:41] - Carga de puerta: 2 -> 3
+[05/08/2026-12:16:50] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:16:50] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:16:50] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:16:50] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:16:50] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:16:50] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:16:50] - Carga de puerta: 1 -> 2
+[05/08/2026-12:16:50] - Carga de puerta: 2 -> 3
+[05/08/2026-12:17:32] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:17:32] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:17:32] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:17:32] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:17:32] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:17:32] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:17:32] - Carga de puerta: 1 -> 2
+[05/08/2026-12:17:32] - Carga de puerta: 2 -> 3
+[05/08/2026-12:22:24] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:22:24] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:22:24] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:22:24] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:22:24] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:22:24] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:22:24] - Carga de puerta: 1 -> 2
+[05/08/2026-12:22:24] - Carga de puerta: 2 -> 3
+[05/08/2026-12:23:05] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:23:05] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:23:05] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:23:05] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:23:05] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:23:05] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:23:05] - Carga de puerta: 1 -> 2
+[05/08/2026-12:23:05] - Carga de puerta: 2 -> 3
+[05/08/2026-12:29:09] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:29:09] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:29:09] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:29:09] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:29:09] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:09] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:09] - Carga de puerta: 1 -> 2
+[05/08/2026-12:29:09] - Carga de puerta: 2 -> 3
+[05/08/2026-12:29:49] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:29:49] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:29:49] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:29:49] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:29:49] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:29:49] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:29:49] - Carga de puerta: 1 -> 2
+[05/08/2026-12:29:49] - Carga de puerta: 2 -> 3
+[05/08/2026-12:30:34] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:30:34] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:30:34] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:30:34] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:30:34] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:30:34] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:30:34] - Carga de puerta: 1 -> 2
+[05/08/2026-12:30:34] - Carga de puerta: 2 -> 3
+[05/08/2026-12:31:51] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:31:51] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:31:51] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:31:51] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:31:51] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:31:51] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:31:51] - Carga de puerta: 1 -> 2
+[05/08/2026-12:31:51] - Carga de puerta: 2 -> 3
+[05/08/2026-12:33:03] - Carga de habitación: Código: 1, Nombre: Altillo, Planta: 2, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 2, Nombre: Baño, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 3, Nombre: Biblioteca, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 4, Nombre: Bodega, Planta: -1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 5, Nombre: Cochera, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 6, Nombre: Cocina, Planta: 0, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 7, Nombre: Comedor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 8, Nombre: Depósito, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 9, Nombre: Despensa, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: true
+[05/08/2026-12:33:03] - Carga de habitación: Código: 10, Nombre: Dormitorio principal, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 11, Nombre: Dormitorio de huéspedes, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 12, Nombre: Escalera, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 13, Nombre: Escritorio, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 14, Nombre: Gimnasio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 15, Nombre: Invernadero, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:33:03] - Carga de habitación: Código: 16, Nombre: Lavadero, Planta: 0, Metros Cuadrados: 10.0, Salida Exterior: true
+[05/08/2026-12:33:03] - Carga de habitación: Código: 17, Nombre: Natatorio, Planta: 0, Metros Cuadrados: 25.0, Salida Exterior: true
+[05/08/2026-12:33:03] - Carga de habitación: Código: 18, Nombre: Pasillo planta baja, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 19, Nombre: Pasillo planta alta, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 20, Nombre: Quincho, Planta: 0, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 21, Nombre: Recibidor, Planta: 0, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 22, Nombre: Sala de Estar, Planta: 1, Metros Cuadrados: 20.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 23, Nombre: Sala de Juegos, Planta: 1, Metros Cuadrados: 10.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 25, Nombre: Sala de Música, Planta: 1, Metros Cuadrados: 15.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de habitación: Código: 26, Nombre: Sótano, Planta: -1, Metros Cuadrados: 30.0, Salida Exterior: false
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Valientes, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Locos Adams, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Aldeanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Paisanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Asirios, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Griegos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Romanos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Mongoles, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Turcos, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de equipo: Nombre Equipo: Los Aztecas, Habitación Actual: 0, Puntaje Habitación: 0, Puntaje Acumulado: 0, Puntaje Exigido: 400
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Sudoku, Puntaje: 51, Tipo: Matemático
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Acertijo, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Trabado, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Crucigrama, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Rayuela, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Penales, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 50, Tipo: Matemático
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 40, Tipo: Lógico
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 30, Tipo: Ingenio
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Letras
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: TODO, Puntaje: 20, Tipo: Búsqueda
+[05/08/2026-12:33:03] - Carga de desafío: Nombre Desafio: Shark Attack, Puntaje: 20, Tipo: Destreza
+[05/08/2026-12:33:03] - Carga de puerta: 1 -> 2
+[05/08/2026-12:33:03] - Carga de puerta: 2 -> 3
