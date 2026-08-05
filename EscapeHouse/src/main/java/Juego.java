@@ -92,10 +92,10 @@ public class Juego
                                         int puntajeRequerido = Integer.parseInt(st.nextToken());
                                         //Lista listaHabitaciones = casona.listarVertices();
                                         Lista listaHabitaciones = habitaciones.listar();
-                                        Habitacion EntraceRoom = obtenerHabitacion(puertaEntrada, listaHabitaciones);
-                                        Habitacion ExitRoom = obtenerHabitacion(puertaSalida, listaHabitaciones);
-                                        casona.insertarArco(EntraceRoom, ExitRoom, puntajeRequerido);
-                                        casona.insertarArco(ExitRoom, EntraceRoom, puntajeRequerido);
+                                        Habitacion habitacionEntrada = obtenerHabitacion(puertaEntrada, listaHabitaciones);
+                                        Habitacion habitacionSalida = obtenerHabitacion(puertaSalida, listaHabitaciones);
+                                        casona.insertarArco(habitacionEntrada, habitacionSalida, puntajeRequerido);
+                                        casona.insertarArco(habitacionSalida, habitacionEntrada, puntajeRequerido);
                                         log("Carga de puerta: " + puertaEntrada + " -> " + puertaSalida);
                                         break;
                                 }
