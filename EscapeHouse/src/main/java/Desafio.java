@@ -21,6 +21,11 @@ public class Desafio implements Comparable
                 this.tipo = unTipo;
         }
         
+        public String getTipo()
+        {
+                return (this.tipo);
+        }
+        
         @Override
         public int compareTo(Object unDesafio)
         {

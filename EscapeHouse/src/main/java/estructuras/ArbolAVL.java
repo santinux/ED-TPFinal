@@ -672,31 +672,26 @@ public class ArbolAVL
         }
     }
     
-    public String listarRango(Comparable min, Comparable max) {
-        String s = "Listado";
-        if (!esVacia()) {
-            s = listarRangoAux(min, max, this.raiz, s);
-
-        }
-        return s;
-
+    public Lista listarRango(Comparable elementoMinimo, Comparable elementoMaximo)
+    {
+        Lista listaRango = new Lista();
+        if (this.raiz != null)
+            listarRangoAux(this.raiz, listaRango, elementoMinimo, elementoMaximo);
+        return (listaRango);
     }
-
-    public String listarRangoAux(Comparable min, Comparable max, NodoAVL actual, String s) {
-
-        if (actual != null) {
-            NodoAVL izq = actual.getIzquierdo();
-            NodoAVL drch = actual.getDerecho();
-            if (actual.getElemento().compareTo(min) > 0 && izq != null) {
-                s = listarRangoAux(min, max, izq, s);
-            }
-            if (actual.getElemento().compareTo(min) >= 0 && actual.getElemento().compareTo(max) <= 0) {
-                s += "\n" + actual.getElemento().toString() + "\t";
-            }
-            if (actual.getElemento().compareTo(max) < 0 && drch != null) {
-                s = listarRangoAux(min, max, drch, s);
-            }
+    
+    private void listarRangoAux(NodoAVL unNodo, Lista unaLista, Comparable unElemMin, Comparable unElemMax)
+    {
+        if (unNodo != null) {
+            if (unNodo.getElemento().compareTo(unElemMin) > 0)
+                // El elemento del nodo actual es mayor que el mínimo, recorre su HI
+                listarRangoAux(unNodo.getIzquierdo(), unaLista, unElemMin, unElemMax);
+            if (unNodo.getElemento().compareTo(unElemMin) >= 0 && unNodo.getElemento().compareTo(unElemMax) <= 0)
+                // El elemento del nodo actual está dentro del rango a listar, se inserta
+                unaLista.insertar(unNodo.getElemento(), unaLista.longitud() + 1);
+            if (unNodo.getElemento().compareTo(unElemMax) < 0)
+                // El elemento del nodo actual es menor que el máximo, recorre su HD
+                listarRangoAux(unNodo.getDerecho(), unaLista, unElemMin, unElemMax);
         }
-        return s;
     }
 }

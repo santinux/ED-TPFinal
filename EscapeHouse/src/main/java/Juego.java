@@ -13,7 +13,7 @@ public class Juego
         private ArbolAVL desafios;
         private GrafoEtiquetado casona;
         private HashMap<String,Equipo> equipos;
-        private HashMap<Equipo, Desafio> desafiosResueltos;
+        private HashMap<String, Lista> desafiosResueltos;
         private static Scanner scan;
         
         public Juego()
@@ -172,6 +172,79 @@ public class Juego
                 }
         }
         
+        private void mostrarDesafiosResueltos()
+        {
+                System.out.print("Ingrese nombre de equipo: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Equipo equipo = equipos.get(nombre);
+                if (equipo != null) {
+                        Lista lista = desafiosResueltos.get(nombre);
+                        if (lista != null && !lista.esVacia()) {
+                                System.out.println("Desafíos resueltos por el equipo " + nombre + ":");
+                                Lista listaClon = lista.clone();
+                                while (!listaClon.esVacia()) {
+                                        Desafio desafio = (Desafio) listaClon.recuperar(1);
+                                        System.out.println(desafio);
+                                        listaClon.eliminar(1);
+                                }
+                        } else {
+                                System.out.println("El equipo " + nombre + " no ha resuelto desafíos");
+                        }
+                } else {
+                        System.out.println("Equipo no encontrado");
+                }
+        }
+        
+        private void verificarDesafioResuelto()
+        {
+                System.out.print("Ingrese nombre de equipo: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Equipo equipo = equipos.get(nombre);
+                if (equipo != null) {
+                        System.out.print("Ingrese nombre de desafío: ");
+                        String nombreDesafio = scan.nextLine().trim();
+                        Desafio desafio = obtenerDesafio(nombreDesafio, desafios.listar());
+                        if (desafio != null) {
+                                Lista listaDesafios = desafiosResueltos.get(nombre);
+                                if (listaDesafios != null && !listaDesafios.esVacia() && listaDesafios.localizar(desafio) != -1) {
+                                        System.out.println("Desafío resuelto");
+                                } else {
+                                        System.out.println("Desafío no resuelto");
+                                }
+                        } else {
+                                System.out.println("Desafío no encontrado");
+                        }
+                } else {
+                        System.out.println("Equipo no encontrado");
+                }
+        }
+        
+        private void mostrarDesafiosTipo()
+        {
+                System.out.print("Ingrese tipo: ");
+                scan.nextLine();
+                String tipo = scan.nextLine().trim();
+                System.out.print("Ingrese puntaje mínimo: ");
+                int puntajeMinimo = scan.nextInt();
+                System.out.print("Ingrese puntaje máximo: ");
+                int puntajeMaximo = scan.nextInt();
+                Desafio desafioMinimo = new Desafio("", "", puntajeMinimo);
+                Desafio desafioMaximo = new Desafio("", "", puntajeMaximo);
+                Lista lista = desafios.listarRango(desafioMinimo, desafioMaximo);
+                if (!lista.esVacia()) {
+                        while (!lista.esVacia()) {
+                                Desafio desafio = (Desafio) lista.recuperar(1);
+                                if (desafio.getTipo().equals(tipo))
+                                        System.out.println(desafio);
+                                lista.eliminar(1);
+                        }
+                } else {
+                        System.out.println("No se encontraron desafíos");
+                }
+        }
+        
         private void mostrarEquipo()
         {
                 System.out.print("Ingrese el nombre: ");
@@ -280,13 +353,16 @@ public class Juego
                 scan.nextLine();
                 String nombre = scan.nextLine().trim();
                 System.out.print("Ingrese tipo: ");
-                scan.nextLine();
                 String tipo = scan.nextLine().trim();
                 System.out.print("Ingrese puntaje: ");
                 int puntaje = scan.nextInt();
                 Desafio desafio = new Desafio(nombre, tipo, puntaje);
-                desafios.insertar(desafio);
-                log("Se crea el desafío: " + desafio);
+                if (!desafios.pertenece(desafio)) {
+                        desafios.insertar(desafio);
+                        log("Se crea el desafío: " + desafio);
+                } else {
+                        System.out.println("Ya existe un desafío con ese puntaje");
+                }
         }
         
         private void eliminarDesafio()
@@ -339,9 +415,13 @@ public class Juego
                 System.out.print("Ingrese nombre: ");
                 scan.nextLine();
                 String nombre = scan.nextLine().trim();
-                Equipo equipo = new Equipo(nombre, 400, 0, 0, 0);
-                equipos.put(nombre, equipo);
-                log("Se crea el equipo: " + equipo);
+                if (!equipos.containsKey(nombre)) {
+                        Equipo equipo = new Equipo(nombre, 400, 0, 0, 0);
+                        equipos.put(nombre, equipo);
+                        log("Se crea el equipo: " + equipo);
+                } else {
+                        System.out.println("Nombre de equipo ya existente");
+                }
         }
         
         private void eliminarEquipo()
@@ -414,13 +494,14 @@ public class Juego
         private void mostrarMenuPrincipal()
         {
                 System.out.println("------------[Menú Principal]------------");
-                System.out.println("1) ABM Habitaciones");
-                System.out.println("2) ABM Desafíos");
-                System.out.println("3) ABM Equipos");
-                System.out.println("4) Consultas sobre habitaciones");
-                System.out.println("5) Consultas sobre desafíos");
-                System.out.println("6) Consultas sobre equipos participantes");
-                System.out.println("7) Consulta general");
+                System.out.println("1) Cargar datos de prueba");
+                System.out.println("2) ABM Habitaciones");
+                System.out.println("3) ABM Desafíos");
+                System.out.println("4) ABM Equipos");
+                System.out.println("5) Consultas sobre habitaciones");
+                System.out.println("6) Consultas sobre desafíos");
+                System.out.println("7) Consultas sobre equipos participantes");
+                System.out.println("8) Consulta general");
                 System.out.println("0) Salir");
                 System.out.println("----------------------------------------");
         }
@@ -455,18 +536,6 @@ public class Juego
                 System.out.println("----------------------------------------");
         }
         
-        private void mostrarMenuConsultasHabitaciones()
-        {
-                System.out.println("--------[Consultas Habitaciones]--------");
-                System.out.println("1) Ver Info de una habitación");
-                System.out.println("2) Ver habitaciones contiguas");
-                System.out.println("3) Ver si es posible llegar de una habitación a otra");
-                System.out.println("4) Ver mínimo puntaje requerido entre 2 habitaciones");
-                System.out.println("5) Ver si se puede pasar de una habitación a otra sin pasar por una habitación con menos de un puntaje");
-                System.out.println("0) Volver al menú principal");
-                System.out.println("----------------------------------------");
-        }
-        
         private void mostrarMenuModificarHabitacion()
         {
                 System.out.println("---------[Modificar Habitación]---------");
@@ -492,6 +561,18 @@ public class Juego
                 System.out.println("2) Modificar habitación actual");
                 System.out.println("3) Modificar puntaje habitación actual");
                 System.out.println("0) Volver");
+                System.out.println("----------------------------------------");
+        }
+        
+        private void mostrarMenuConsultasHabitaciones()
+        {
+                System.out.println("--------[Consultas Habitaciones]--------");
+                System.out.println("1) Ver Info de una habitación");
+                System.out.println("2) Ver habitaciones contiguas");
+                System.out.println("3) Ver si es posible llegar de una habitación a otra");
+                System.out.println("4) Ver mínimo puntaje requerido entre 2 habitaciones");
+                System.out.println("5) Ver si se puede pasar de una habitación a otra sin pasar por una habitación con menos de un puntaje");
+                System.out.println("0) Volver al menú principal");
                 System.out.println("----------------------------------------");
         }
         
@@ -626,6 +707,15 @@ public class Juego
                         case 1:
                                 mostrarDesafio();
                                 break;
+                        case 2:
+                                mostrarDesafiosResueltos();
+                                break;
+                        case 3:
+                                verificarDesafioResuelto();
+                                break;
+                        case 4:
+                                mostrarDesafiosTipo();
+                                break;
                         case 0:
                                 break;
                         default:
@@ -669,7 +759,7 @@ public class Juego
         
         public void iniciar()
         {
-                cargarDatos();
+                cargarDatos(); // Eliminar cuando esté listo el juego
                 System.out.println("-------------[ESCAPE HOUSE]-------------");
                 short opcion;
                 do {
@@ -678,24 +768,27 @@ public class Juego
                         opcion = scan.nextShort();
                         switch (opcion) {
                         case 1:
-                                habitacionesABM();
+                                cargarDatos();
                                 break;
                         case 2:
-                                desafiosABM();
+                                habitacionesABM();
                                 break;
                         case 3:
-                                equiposABM();
+                                desafiosABM();
                                 break;
                         case 4:
-                                consultasHabitaciones();
+                                equiposABM();
                                 break;
                         case 5:
-                                consultasDesafios();
+                                consultasHabitaciones();
                                 break;
                         case 6:
-                                consultasEquipos();
+                                consultasDesafios();
                                 break;
                         case 7:
+                                consultasEquipos();
+                                break;
+                        case 8:
                                 mostrarSistema();
                                 break;
                         case 0:
