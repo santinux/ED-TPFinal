@@ -16,6 +16,11 @@ public class Desafio implements Comparable
                 return (this.nombre);
         }
         
+        public void setTipo(String unTipo)
+        {
+                this.tipo = unTipo;
+        }
+        
         @Override
         public int compareTo(Object unDesafio)
         {

@@ -305,22 +305,110 @@ public class Juego
         
         private void modificarDesafio()
         {
-                //
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Desafio desafio = obtenerDesafio(nombre, desafios.listar());
+                if (desafio != null) {
+                        short opcion;
+                        do {
+                                mostrarMenuModificarDesafio();
+                                System.out.print("Ingrese una opción: ");
+                                opcion = scan.nextShort();
+                                switch (opcion) {
+                                        case 1:
+                                                System.out.print("Ingrese tipo: ");
+                                                scan.nextLine();
+                                                String tipo = scan.nextLine().trim();
+                                                desafio.setTipo(tipo);
+                                                log("Se modifica el desafío: " + nombre);
+                                                break;
+                                        case 0:
+                                                break;
+                                        default:
+                                                System.out.println("Opción inválida");
+                                }
+                        } while (opcion != 0);
+                } else {
+                        System.out.println("Nombre inválido");
+                }
         }
         
         private void crearEquipo()
         {
-                //
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Equipo equipo = new Equipo(nombre, 400, 0, 0, 0);
+                equipos.put(nombre, equipo);
+                log("Se crea el equipo: " + equipo);
         }
         
         private void eliminarEquipo()
         {
-                //
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Equipo equipo = equipos.get(nombre);
+                if (equipo != null) {
+                        equipos.remove(nombre);
+                        log("Se elimina el equipo: " + nombre);
+                } else {
+                        System.out.println("Nombre inválido");
+                }
         }
         
         private void modificarEquipo()
         {
-                //
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Equipo equipo = equipos.get(nombre);
+                if (equipo != null) {
+                        short opcion;
+                        do {
+                                mostrarMenuModificarEquipo();
+                                System.out.print("Ingrese una opción: ");
+                                opcion = scan.nextShort();
+                                switch (opcion) {
+                                        case 1:
+                                                System.out.print("Ingrese nuevo puntaje acumulado: ");
+                                                int nuevoPuntajeAcumulado = scan.nextInt();
+                                                if (nuevoPuntajeAcumulado >= 0) {
+                                                        equipo.setPuntajeAcumulado(nuevoPuntajeAcumulado);
+                                                        log("Se modifica el puntaje acumulado del equipo: " + nombre);
+                                                }
+                                                break;
+                                        case 2:
+                                                System.out.print("Ingrese nueva habitación actual: ");
+                                                int nuevaHabitacionActual = scan.nextInt();
+                                                if (nuevaHabitacionActual >= 0 && nuevaHabitacionActual < 100) {
+                                                        equipo.setHabitacionActual(nuevaHabitacionActual);
+                                                        log("Se modifica la habitación actual del equipo: " + nombre);
+                                                } else {
+                                                        System.out.println("Habitación inválida");
+                                                }
+                                                break;
+                                        case 3:
+                                                System.out.print("Ingrese nuevo puntaje habitación actual: ");
+                                                int nuevoPuntajeHabitacionActual = scan.nextInt();
+                                                if (nuevoPuntajeHabitacionActual >= 0) {
+                                                        equipo.setPuntajeHabitacion(nuevoPuntajeHabitacionActual);
+                                                        log("Se modifica el puntaje de habitación actual del equipo: " + nombre);
+                                                } else {
+                                                        System.out.println("Puntaje inválido");
+                                                }
+                                                break;
+                                        case 0:
+                                                break;
+                                        default:
+                                                System.out.println("Opción inválida");
+                                                break;
+                                }
+                        } while (opcion != 0);
+                } else {
+                        System.out.println("Equipo no encontrado");
+                }
         }
         
         private void mostrarMenuPrincipal()
@@ -392,9 +480,7 @@ public class Juego
         private void mostrarMenuModificarDesafio()
         {
                 System.out.println("----------[Modificar Desafío]----------");
-                System.out.println("1) Modificar nombre");
-                System.out.println("2) Modificar tipo");
-                System.out.println("3) Modificar puntaje");
+                System.out.println("1) Modificar tipo");
                 System.out.println("0) Volver");
                 System.out.println("----------------------------------------");
         }
@@ -402,9 +488,9 @@ public class Juego
         private void mostrarMenuModificarEquipo()
         {
                 System.out.println("-----------[Modificar Equipo]-----------");
-                System.out.println("1) Modificar nombre");
-                System.out.println("2) Modificar tipo");
-                System.out.println("3) Modificar puntaje");
+                System.out.println("1) Modificar puntaje acumulado");
+                System.out.println("2) Modificar habitación actual");
+                System.out.println("3) Modificar puntaje habitación actual");
                 System.out.println("0) Volver");
                 System.out.println("----------------------------------------");
         }
@@ -473,7 +559,7 @@ public class Juego
                                 eliminarDesafio();
                                 break;
                         case 3:
-                                //modificarDesafio();
+                                modificarDesafio();
                                 break;
                         case 0:
                                 break;
@@ -493,13 +579,13 @@ public class Juego
                         opcion = scan.nextShort();
                         switch (opcion) {
                         case 1:
-                                //crearEquipo();
+                                crearEquipo();
                                 break;
                         case 2:
-                                //eliminarEquipo();
+                                eliminarEquipo();
                                 break;
                         case 3:
-                                //modificarEquipo();
+                                modificarEquipo();
                                 break;
                         case 0:
                                 break;
