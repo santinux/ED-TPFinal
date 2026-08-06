@@ -44,6 +44,13 @@ public class GrafoEtiquetado
                                 }
                         }
                 }
+                if (exito) {
+                        NodoVertice nodo = this.inicio;
+                        while (nodo != null) {
+                                eliminarArco(nodo.getElemento(), unElemento);
+                                nodo = nodo.getSiguienteVertice();
+                        }
+                }
                 return (exito);
         }
         
@@ -212,6 +219,23 @@ public class GrafoEtiquetado
                 if (unVertice != null) {
                         unaLista.insertar(unVertice.getElemento(), unaLista.longitud() + 1);
                         listarVerticesAux(unVertice.getSiguienteVertice(), unaLista);
+                }
+        }
+        
+        public Lista listarAdyacentes(NodoVertice unVertice)
+        {
+                Lista listaAdyacentes = new Lista();
+                NodoAdyacente adyacente = unVertice.getPrimerAdyacente();
+                if (adyacente != null)
+                        listarAdyacentesAux(adyacente, listaAdyacentes);
+                return (listaAdyacentes);
+        }
+        
+        private void listarAdyacentesAux(NodoAdyacente unAdyacente, Lista unaLista)
+        {
+                if (unAdyacente != null) {
+                        unaLista.insertar(unAdyacente.getVertice().getElemento(), unaLista.longitud() + 1);
+                        listarAdyacentesAux(unAdyacente.getSiguienteAdyacente(), unaLista);
                 }
         }
         

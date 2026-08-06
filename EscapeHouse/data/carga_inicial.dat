@@ -1,28 +1,28 @@
-H;1;Altillo;2;10;false
-H;2;Baño;0;10;false
-H;3;Biblioteca;1;20;false
-H;4;Bodega;-1;20;false
-H;5;Cochera;0;20;true
-H;6;Cocina;0;15;false
-H;7;Comedor;0;20;false
-H;8;Depósito;-1;30;false
-H;9;Despensa;0;20;true
-H;10;Dormitorio principal;1;20;false
-H;11;Dormitorio de huéspedes;1;15;false
-H;12;Escalera;0;10;false
-H;13;Escritorio;1;10;false
-H;14;Gimnasio;0;25;false
-H;15;Invernadero;0;25;true
-H;16;Lavadero;0;10;true
 H;17;Natatorio;0;25;true
+H;16;Lavadero;0;10;true
 H;18;Pasillo planta baja;0;20;false
-H;19;Pasillo planta alta;1;20;false
-H;20;Quincho;0;30;false
-H;21;Recibidor;0;20;true
-H;22;Sala de Estar;1;20;true
+H;7;Comedor;0;20;false
+H;9;Despensa;0;20;true
+H;8;Depósito;-1;30;false
+H;13;Escritorio;1;10;false
+H;15;Invernadero;0;25;true
+H;14;Gimnasio;0;25;false
+H;10;Dormitorio principal;1;20;false
+H;12;Escalera;0;10;false
+H;11;Dormitorio de huéspedes;1;15;false
 H;23;Sala de Juegos;1;10;false
-H;24;Sala de Música;1;15;false
 H;25;Sótano;-1;30;false
+H;24;Sala de Música;1;15;false
+H;1;Altillo;2;10;false
+H;3;Biblioteca;1;20;false
+H;2;Baño;0;10;false
+H;19;Pasillo planta alta;1;20;false
+H;21;Recibidor;0;20;true
+H;20;Quincho;0;30;false
+H;22;Sala de Estar;1;20;true
+H;4;Bodega;-1;20;false
+H;6;Cocina;0;15;false
+H;5;Cochera;0;20;true
 E;Los Valientes;400;0;0;0
 E;Los Locos Adams;400;0;0;0
 E;Los Aldeanos;400;0;0;0

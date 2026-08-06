@@ -21,6 +21,26 @@ public class Habitacion implements Comparable
                 return (this.codigo);
         }
         
+        public void setNombre(String unNombre)
+        {
+                this.nombre = unNombre;
+        }
+        
+        public void setPlanta(int unaPlanta)
+        {
+                this.planta = unaPlanta;
+        }
+        
+        public void setMetrosCuadrados(double metrosCuadrados)
+        {
+                this.metrosCuadrados = metrosCuadrados;
+        }
+        
+        public boolean tieneSalida()
+        {
+                return (this.salidaExterior);
+        }
+        
         @Override
         public int compareTo(Object unaHabitacion)
         {

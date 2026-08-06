@@ -545,8 +545,6 @@ public class ArbolAVL
         return resultado;
 
     }
-    // minimoElem (): elemento Recorre la rama correspondiente y devuelve el
-    // elemento más pequeño almacenado en el árbol.
 
     public Comparable maximoElem() {
 

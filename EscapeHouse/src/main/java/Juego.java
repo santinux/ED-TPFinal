@@ -13,7 +13,7 @@ public class Juego
         private ArbolAVL desafios;
         private GrafoEtiquetado casona;
         private HashMap<String,Equipo> equipos;
-        private HashMap<Desafio,Equipo> desafiosEquipos;
+        private HashMap<Equipo, Desafio> desafiosResueltos;
         private static Scanner scan;
         
         public Juego()
@@ -22,6 +22,7 @@ public class Juego
                 desafios = new ArbolAVL();
                 casona = new GrafoEtiquetado();
                 equipos = new HashMap<>();
+                desafiosResueltos = new HashMap<>();
                 scan = new Scanner(System.in);
         }
         
@@ -190,27 +191,116 @@ public class Juego
         
         private void crearHabitacion()
         {
-                //
+                int codigo = ((Habitacion) habitaciones.maximoElem()).getCodigo() + 1;
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                System.out.print("Ingrese planta: ");
+                int planta = scan.nextInt();
+                System.out.print("Ingrese metros cuadrados: ");
+                double metrosCuadrados = scan.nextDouble();
+                Habitacion habitacion = new Habitacion(codigo, nombre, planta, metrosCuadrados, false);
+                habitaciones.insertar(habitacion);
+                log("Se crea habitación: " + habitacion);
         }
         
         private void eliminarHabitacion()
         {
-                //
+                System.out.print("Ingrese código: ");
+                int codigo = scan.nextInt();
+                if (codigo > 0 && codigo < 100) {
+                        Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                        if (habitacion != null && !habitacion.tieneSalida()) {
+                                habitaciones.eliminar(habitacion);
+                                casona.eliminarVertice(habitacion);
+                                log("Se elimina habitación: " + habitacion);
+                        }
+                } else {
+                        System.out.println("Código inválido");
+                }
         }
         
         private void modificarHabitacion()
         {
-                //
+                System.out.print("Ingrese código: ");
+                int codigo = scan.nextInt();
+                if (codigo > 0 && codigo < 100) {
+                        Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                        if (habitacion != null && !habitacion.tieneSalida()) {
+                                short opcion;
+                                do {
+                                        mostrarMenuModificarHabitacion();
+                                        System.out.print("Ingrese una opción: ");
+                                        opcion = scan.nextShort();
+                                        switch (opcion) {
+                                        case 1:
+                                                System.out.print("Ingrese nuevo nombre: ");
+                                                scan.nextLine();
+                                                String nuevoNombre = scan.nextLine().trim();
+                                                habitacion.setNombre(nuevoNombre);
+                                                log("Se modifica el nombre de la habitación " + codigo);
+                                                break;
+                                        case 2:
+                                                System.out.print("Ingrese nueva planta: ");
+                                                int nuevaPlanta = scan.nextInt();
+                                                if (nuevaPlanta > -2 && nuevaPlanta < 3) {
+                                                        habitacion.setPlanta(nuevaPlanta);
+                                                        log("Se modifica la planta de la habitación " + codigo);
+                                                } else {
+                                                        System.out.println("Planta inexistente");
+                                                }
+                                                break;
+                                        case 3:
+                                                System.out.print("Ingrese nuevo área en metros cuadrados: ");
+                                                double nuevosMetrosCuadrados = scan.nextDouble();
+                                                if (nuevosMetrosCuadrados > 0) {
+                                                        habitacion.setMetrosCuadrados(nuevosMetrosCuadrados);
+                                                        log("Se modifica el área de la habitación " + codigo);
+                                                } else {
+                                                        System.out.println("Ingrese un valor mayor a 0");
+                                                }
+                                        case 0:
+                                                break;
+                                        default:
+                                                System.out.println("Opción inválida");
+                                                break;
+                                        }
+                                } while (opcion != 0);
+                        } else {
+                                System.out.println("Habitación no modificable");
+                        }
+                } else {
+                        System.out.println("Código inválido");
+                }
         }
         
         private void crearDesafio()
         {
-                //
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                System.out.print("Ingrese tipo: ");
+                scan.nextLine();
+                String tipo = scan.nextLine().trim();
+                System.out.print("Ingrese puntaje: ");
+                int puntaje = scan.nextInt();
+                Desafio desafio = new Desafio(nombre, tipo, puntaje);
+                desafios.insertar(desafio);
+                log("Se crea el desafío: " + desafio);
         }
         
         private void eliminarDesafio()
         {
-                //
+                System.out.print("Ingrese nombre: ");
+                scan.nextLine();
+                String nombre = scan.nextLine().trim();
+                Desafio desafio = obtenerDesafio(nombre, desafios.listar());
+                if (desafio != null) {
+                        desafios.eliminar(desafio);
+                        log("Se elimina el desafío: " + desafio);
+                } else {
+                        System.out.println("Nombre inválido");
+                }
         }
         
         private void modificarDesafio()
@@ -289,6 +379,36 @@ public class Juego
                 System.out.println("----------------------------------------");
         }
         
+        private void mostrarMenuModificarHabitacion()
+        {
+                System.out.println("---------[Modificar Habitación]---------");
+                System.out.println("1) Modificar nombre");
+                System.out.println("2) Modificar planta");
+                System.out.println("3) Modificar metros cuadrados");
+                System.out.println("0) Volver");
+                System.out.println("----------------------------------------");
+        }
+        
+        private void mostrarMenuModificarDesafio()
+        {
+                System.out.println("----------[Modificar Desafío]----------");
+                System.out.println("1) Modificar nombre");
+                System.out.println("2) Modificar tipo");
+                System.out.println("3) Modificar puntaje");
+                System.out.println("0) Volver");
+                System.out.println("----------------------------------------");
+        }
+        
+        private void mostrarMenuModificarEquipo()
+        {
+                System.out.println("-----------[Modificar Equipo]-----------");
+                System.out.println("1) Modificar nombre");
+                System.out.println("2) Modificar tipo");
+                System.out.println("3) Modificar puntaje");
+                System.out.println("0) Volver");
+                System.out.println("----------------------------------------");
+        }
+        
         private void mostrarMenuConsultasDesafios()
         {
                 System.out.println("----------[Consultas Desafíos]----------");
@@ -321,13 +441,13 @@ public class Juego
                         opcion = scan.nextShort();
                         switch (opcion) {
                         case 1:
-                                //crearHabitacion();
+                                crearHabitacion();
                                 break;
                         case 2:
-                                //eliminarHabitacion();
+                                eliminarHabitacion();
                                 break;
                         case 3:
-                                //modificarHabitacion();
+                                modificarHabitacion();
                                 break;
                         case 0:
                                 break;
@@ -347,10 +467,10 @@ public class Juego
                         opcion = scan.nextShort();
                         switch (opcion) {
                         case 1:
-                                //crearDesafio();
+                                crearDesafio();
                                 break;
                         case 2:
-                                //eliminarDesafio();
+                                eliminarDesafio();
                                 break;
                         case 3:
                                 //modificarDesafio();
