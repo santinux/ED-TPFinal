@@ -217,15 +217,50 @@ public class GrafoEtiquetado
                 return (existe);
         }
         
-        public Lista minimoPuntaje(Object origen, Object destino) {
+        public boolean existeCaminoCosto(Object unVerticeOrigen, Object unVerticeDestino, int costoMaximo) {
+                boolean esPosible = false;
+                if (existeVertice(unVerticeOrigen) && existeVertice(unVerticeDestino)) {
+                        Lista visitados = new Lista();
+                        NodoVertice verticeOrigen = obtenerNodoVertice(this.inicio, unVerticeOrigen);
+                        esPosible = existeCaminoCostoAux(verticeOrigen, unVerticeDestino, visitados, costoMaximo, 0);
+                }
+                return (esPosible);
+        }
+        
+        private boolean existeCaminoCostoAux(NodoVertice unNodoVertice, Object unVerticeDestino, Lista visitados, int costoMaximo, int costoAcumulado)
+        {
+                boolean existe = false;
+                if (unNodoVertice != null && (visitados.localizar(unNodoVertice.getElemento()) < 0)) {
+                        if (unNodoVertice.getElemento().equals(unVerticeDestino)) {
+                                existe = true;
+                        } else {
+                                visitados.insertar(unNodoVertice.getElemento(), visitados.longitud() + 1);
+                                NodoAdyacente adyacente = unNodoVertice.getPrimerAdyacente();
+                                while (adyacente != null && !existe) {
+                                        NodoVertice vecino = adyacente.getVertice();
+                                        int costoNuevo = costoAcumulado + (int) adyacente.getEtiqueta();
+                                        boolean noVisitado = visitados.localizar(vecino.getElemento()) == -1;
+                                        boolean costoValido = costoNuevo <= costoMaximo;
+                                        if (noVisitado && costoValido) {
+                                                existe = existeCaminoCostoAux(vecino, unVerticeDestino, visitados, costoMaximo, costoNuevo);
+                                        }
+                                        adyacente = adyacente.getSiguienteAdyacente();
+                                }
+                                visitados.eliminar(visitados.longitud());
+                        }
+                }
+                return (existe);
+        }
+        
+        public Lista minimoPuntaje(Object origen, Object unVerticeDestino) {
                 Lista caminoMinimo = new Lista();
-                if (existeVertice(origen) && existeVertice(destino)) {
+                if (existeVertice(origen) && existeVertice(unVerticeDestino)) {
                         Lista caminoActual = new Lista();
                         NodoVertice nodoOrigen = obtenerNodoVertice(this.inicio, origen);
                         int[] costoActual = { 0 };
                         int[] costoMinimo = { Integer.MAX_VALUE };
                         
-                        minimoPuntajeAux(nodoOrigen, destino, caminoActual, caminoMinimo, costoActual, costoMinimo);
+                        minimoPuntajeAux(nodoOrigen, unVerticeDestino, caminoActual, caminoMinimo, costoActual, costoMinimo);
                         if (!caminoMinimo.esVacia()) {
                                 System.out.println("Puntaje minimo acumulado: " + costoMinimo[0]);
                         } else {
@@ -235,12 +270,12 @@ public class GrafoEtiquetado
                 return caminoMinimo;
         }
         
-        private void minimoPuntajeAux(NodoVertice actual, Object destino, Lista caminoActual, Lista caminoMinimo,
+        private void minimoPuntajeAux(NodoVertice unNodoVertice, Object unVerticeDestino, Lista caminoActual, Lista caminoMinimo,
                                       int[] costoActual, int[] costoMinimo) {
-                if(actual!=null){
+                if(unNodoVertice!=null){
                         //agrego el vertice visitado al camino actual
-                        caminoActual.insertar(actual.getElemento(), caminoActual.longitud() + 1);
-                        if(actual.getElemento().equals(destino)){
+                        caminoActual.insertar(unNodoVertice.getElemento(), caminoActual.longitud() + 1);
+                        if(unNodoVertice.getElemento().equals(unVerticeDestino)){
                                 //llegue donde quería, verifico si es el camino mas barato
                                 if(costoActual[0] < costoMinimo [0]){
                                         costoMinimo[0] = costoActual[0];
@@ -252,7 +287,7 @@ public class GrafoEtiquetado
                                 }
                         }else{
                                 // me muevo entre los nodos adyacentes
-                                NodoAdyacente ady = actual.getPrimerAdyacente();
+                                NodoAdyacente ady = unNodoVertice.getPrimerAdyacente();
                                 while (ady!=null) {
                                         Object elemAdy = ady.getVertice().getElemento();
                                         int pesoArco = (int) ady.getEtiqueta(); // casteo a entero la etiqueta de tipo object
@@ -263,7 +298,7 @@ public class GrafoEtiquetado
                                                         // sumo el puntaje al actual
                                                         costoActual[0] += pesoArco;
                                                         //llamado recursivo con el adyacente
-                                                        minimoPuntajeAux(ady.getVertice(), destino, caminoActual, caminoMinimo, costoActual, costoMinimo);
+                                                        minimoPuntajeAux(ady.getVertice(), unVerticeDestino, caminoActual, caminoMinimo, costoActual, costoMinimo);
                                                         costoActual[0] -= pesoArco; // resto el puntaje para ir por otras ramas
                                                 }
                                                 
@@ -276,25 +311,25 @@ public class GrafoEtiquetado
                 }
         }
         
-        public Lista sinPasarPor (Object origen , Object destino , Object evitar , int puntajeMax){
+        public Lista sinPasarPor (Object origen , Object unVerticeDestino , Object evitar , int puntajeMax){
                 Lista caminos = new Lista();
-                if(existeVertice(origen) && existeVertice(destino)){
+                if(existeVertice(origen) && existeVertice(unVerticeDestino)){
                         NodoVertice nodoOrigen = obtenerNodoVertice(this.inicio, origen);
                         // si el origen es la habitacion que quiero evitar no hago nada
                         if(evitar == null || !nodoOrigen.getElemento().equals(evitar)){
                                 Lista caminoActual = new Lista();
-                                sinPasarPorAux(nodoOrigen, destino , evitar , puntajeMax , 0 , caminoActual , caminos);
+                                sinPasarPorAux(nodoOrigen, unVerticeDestino , evitar , puntajeMax , 0 , caminoActual , caminos);
                         }
                 }
                 return caminos;
         }
         
-        private void sinPasarPorAux(NodoVertice nActual , Object destino , Object evitar , int puntajeMax , int costoAct, Lista caminoActual, Lista caminos){
+        private void sinPasarPorAux(NodoVertice nActual , Object unVerticeDestino , Object evitar , int puntajeMax , int costoAct, Lista caminoActual, Lista caminos){
                 if(nActual != null){
                         //agrego el vertice al camino actual
                         caminoActual.insertar(nActual.getElemento(), caminoActual.longitud()+1);
                         
-                        if(nActual.getElemento().equals(destino)){
+                        if(nActual.getElemento().equals(unVerticeDestino)){
                                 //guardo el clon del camino actual en la lista general
                                 caminos.insertar(caminoActual.clone(), caminos.longitud() +1 );
                         }else{
@@ -308,7 +343,7 @@ public class GrafoEtiquetado
                                                 // verifico no superar el puntaje maximo
                                                 int nuevoCostAct = costoAct + pesoArco;
                                                 if( nuevoCostAct<= puntajeMax){
-                                                        sinPasarPorAux(ady.getVertice(), destino, evitar, puntajeMax, nuevoCostAct, caminoActual, caminos);
+                                                        sinPasarPorAux(ady.getVertice(), unVerticeDestino, evitar, puntajeMax, nuevoCostAct, caminoActual, caminos);
                                                 }
                                         }
                                         ady= ady.getSiguienteAdyacente();

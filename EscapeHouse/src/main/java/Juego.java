@@ -158,12 +158,47 @@ public class Juego
         
         private void habitacionesContiguas()
         {
-                //TODO
+                System.out.print("Ingrese código de habitación: ");
+                int codigo = scan.nextInt();
+                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                if (habitacion != null) {
+                        Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacion);
+                        if (!habitacionesAdyacentes.esVacia()) {
+                                System.out.println("Habitaciones contiguas: ");
+                                while (!habitacionesAdyacentes.esVacia()) {
+                                        Habitacion habitacionAdyacente = (Habitacion) habitacionesAdyacentes.recuperar(1);
+                                        System.out.println("Código: " + habitacionAdyacente.getCodigo()
+                                                          + " Nombre: " + habitacionAdyacente.getNombre()
+                                                          + " Puntaje requerido: " + casona.obtenerEtiqueta(habitacion, habitacionAdyacente));
+                                        habitacionesAdyacentes.eliminar(1);
+                                }
+                        }
+                }
         }
         
         private void esPosibleLlegar()
         {
-                //TODO
+                System.out.print("Ingrese el código de la habitación de origen: ");
+                int codOrigen = scan.nextInt();
+                System.out.print("Ingrese el código de la habitación de destino: ");
+                int codDestino = scan.nextInt();
+                System.out.print("Ingrese el puntaje k a acumular: ");
+                int k = scan.nextInt();
+                
+                Lista habLista = habitaciones.listar();
+                Habitacion habOrigen = obtenerHabitacion(codOrigen, habLista);
+                Habitacion habDestino = obtenerHabitacion(codDestino, habLista);
+                
+                if (habOrigen != null && habDestino != null) {
+                        //if (casona.existeCaminoCosto(habOrigen, habDestino, k)) {
+                        if (casona.existeCamino(habOrigen, habDestino)) {
+                                System.out.println("Es posible llegar");
+                        } else {
+                                System.out.println("No es posible llegar");
+                        }
+                } else {
+                        System.out.println("Alguna de las habitaciones ingresadas no existen");
+                }
         }
         
         private void minimoPuntaje()
@@ -452,6 +487,7 @@ public class Juego
                                 int puntajeRequerido = (int) casona.obtenerEtiqueta(habitacionActual, habitacionAdyacente);
                                 if (equipo.getPuntajeAcumulado() >= puntajeRequerido) {
                                         equipo.setHabitacionActual(habitacionAdyacente.getCodigo());
+                                        equipo.setPuntajeHabitacion(0);
                                         System.out.println("¡El equipo " + nombreEquipo + " ha pasado de habitación!");
                                         log("Equipo " + nombreEquipo + " pasó a la habitación " + habitacionAdyacente.getCodigo());
                                 } else {
@@ -499,7 +535,16 @@ public class Juego
                 double metrosCuadrados = scan.nextDouble();
                 Habitacion habitacion = new Habitacion(codigo, nombre, planta, metrosCuadrados, false);
                 habitaciones.insertar(habitacion);
+                casona.insertarVertice(habitacion);
                 log("Se crea habitación: " + habitacion);
+                System.out.print("Ingrese código de habitación contigua: ");
+                int codigoContigua = scan.nextInt();
+                System.out.print("Ingrese puntaje requerido: ");
+                int puntajeRequerido = scan.nextInt();
+                Habitacion habitacionContigua = obtenerHabitacion(codigoContigua, habitaciones.listar());
+                casona.insertarArco(habitacion, habitacionContigua, puntajeRequerido);
+                casona.insertarArco(habitacionContigua, habitacion, puntajeRequerido);
+                log("Carga de puerta (arco): " + codigo + " -> " + codigoContigua);
         }
         
         private void eliminarHabitacion()
