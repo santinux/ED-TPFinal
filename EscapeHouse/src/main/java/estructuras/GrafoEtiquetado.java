@@ -145,6 +145,27 @@ public class GrafoEtiquetado
                 return (adyacentePadre);
         }
         
+        public Object obtenerEtiqueta(Object origen, Object destino)
+        {
+                Object etiqueta = null;
+                NodoVertice nodoOrigen = obtenerNodoVertice(this.inicio, origen);
+                if (nodoOrigen != null)
+                        etiqueta = obtenerEtiquetaAux(nodoOrigen.getPrimerAdyacente(), destino);
+                return (etiqueta);
+        }
+        
+        private Object obtenerEtiquetaAux(NodoAdyacente unAdyacente, Object destino) {
+                Object etiqueta = null;
+                if (unAdyacente != null) {
+                        if (unAdyacente.getVertice().getElemento().equals(destino)) {
+                                etiqueta = unAdyacente.getEtiqueta();
+                        } else {
+                                etiqueta = obtenerEtiquetaAux(unAdyacente.getSiguienteAdyacente(), destino);
+                        }
+                }
+                return (etiqueta);
+        }
+        
         public boolean existeArco(Object unVerticeOrigen, Object unVerticeDestino)
         {
                 boolean existe = false;
@@ -196,6 +217,108 @@ public class GrafoEtiquetado
                 return (existe);
         }
         
+        public Lista minimoPuntaje(Object origen, Object destino) {
+                Lista caminoMinimo = new Lista();
+                if (existeVertice(origen) && existeVertice(destino)) {
+                        Lista caminoActual = new Lista();
+                        NodoVertice nodoOrigen = obtenerNodoVertice(this.inicio, origen);
+                        int[] costoActual = { 0 };
+                        int[] costoMinimo = { Integer.MAX_VALUE };
+                        
+                        minimoPuntajeAux(nodoOrigen, destino, caminoActual, caminoMinimo, costoActual, costoMinimo);
+                        if (!caminoMinimo.esVacia()) {
+                                System.out.println("Puntaje minimo acumulado: " + costoMinimo[0]);
+                        } else {
+                                System.out.println("No existe un camino que conecte las habitaciones");
+                        }
+                }
+                return caminoMinimo;
+        }
+        
+        private void minimoPuntajeAux(NodoVertice actual, Object destino, Lista caminoActual, Lista caminoMinimo,
+                                      int[] costoActual, int[] costoMinimo) {
+                if(actual!=null){
+                        //agrego el vertice visitado al camino actual
+                        caminoActual.insertar(actual.getElemento(), caminoActual.longitud() + 1);
+                        if(actual.getElemento().equals(destino)){
+                                //llegue donde quería, verifico si es el camino mas barato
+                                if(costoActual[0] < costoMinimo [0]){
+                                        costoMinimo[0] = costoActual[0];
+                                        // remplazo los elementos del camino minimo con los del actual
+                                        caminoMinimo.vaciar();
+                                        for(int i = 1 ; i<= caminoActual.longitud();i++){
+                                                caminoMinimo.insertar(caminoActual.recuperar(i), i);
+                                        }
+                                }
+                        }else{
+                                // me muevo entre los nodos adyacentes
+                                NodoAdyacente ady = actual.getPrimerAdyacente();
+                                while (ady!=null) {
+                                        Object elemAdy = ady.getVertice().getElemento();
+                                        int pesoArco = (int) ady.getEtiqueta(); // casteo a entero la etiqueta de tipo object
+                                        //verifico que el nodo no este en el caminoActual
+                                        if(caminoActual.localizar(elemAdy)<0){
+                                                // solo sigo por esta rama si hay posibilidad de mejorar el minimo
+                                                if(costoActual[0] + pesoArco < costoMinimo[0]){
+                                                        // sumo el puntaje al actual
+                                                        costoActual[0] += pesoArco;
+                                                        //llamado recursivo con el adyacente
+                                                        minimoPuntajeAux(ady.getVertice(), destino, caminoActual, caminoMinimo, costoActual, costoMinimo);
+                                                        costoActual[0] -= pesoArco; // resto el puntaje para ir por otras ramas
+                                                }
+                                                
+                                        }
+                                        ady = ady.getSiguienteAdyacente();
+                                }
+                        }
+                        //elimino el nodo actual del final de la lista
+                        caminoActual.eliminar(caminoActual.longitud());
+                }
+        }
+        
+        public Lista sinPasarPor (Object origen , Object destino , Object evitar , int puntajeMax){
+                Lista caminos = new Lista();
+                if(existeVertice(origen) && existeVertice(destino)){
+                        NodoVertice nodoOrigen = obtenerNodoVertice(this.inicio, origen);
+                        // si el origen es la habitacion que quiero evitar no hago nada
+                        if(evitar == null || !nodoOrigen.getElemento().equals(evitar)){
+                                Lista caminoActual = new Lista();
+                                sinPasarPorAux(nodoOrigen, destino , evitar , puntajeMax , 0 , caminoActual , caminos);
+                        }
+                }
+                return caminos;
+        }
+        
+        private void sinPasarPorAux(NodoVertice nActual , Object destino , Object evitar , int puntajeMax , int costoAct, Lista caminoActual, Lista caminos){
+                if(nActual != null){
+                        //agrego el vertice al camino actual
+                        caminoActual.insertar(nActual.getElemento(), caminoActual.longitud()+1);
+                        
+                        if(nActual.getElemento().equals(destino)){
+                                //guardo el clon del camino actual en la lista general
+                                caminos.insertar(caminoActual.clone(), caminos.longitud() +1 );
+                        }else{
+                                NodoAdyacente ady = nActual.getPrimerAdyacente();
+                                while (ady != null) {
+                                        Object elmAdy = ady.getVertice().getElemento();
+                                        int pesoArco = (int) ady.getEtiqueta();
+                                        boolean esEvitado = (evitar != null && elmAdy.equals(evitar));
+                                        // sigo solo si no es nodo que quiero evitar
+                                        if(!esEvitado && caminoActual.localizar(elmAdy) < 0 ){
+                                                // verifico no superar el puntaje maximo
+                                                int nuevoCostAct = costoAct + pesoArco;
+                                                if( nuevoCostAct<= puntajeMax){
+                                                        sinPasarPorAux(ady.getVertice(), destino, evitar, puntajeMax, nuevoCostAct, caminoActual, caminos);
+                                                }
+                                        }
+                                        ady= ady.getSiguienteAdyacente();
+                                }
+                        }
+                        // elimino para buscar otros caminos
+                        caminoActual.eliminar(caminoActual.longitud());
+                }
+        }
+        
         public boolean esVacio()
         {
                 return (this.inicio == null);
@@ -222,9 +345,10 @@ public class GrafoEtiquetado
                 }
         }
         
-        public Lista listarAdyacentes(NodoVertice unVertice)
+        public Lista listarAdyacentes(Object unElemento)
         {
                 Lista listaAdyacentes = new Lista();
+                NodoVertice unVertice = obtenerNodoVertice(this.inicio, unElemento);
                 NodoAdyacente adyacente = unVertice.getPrimerAdyacente();
                 if (adyacente != null)
                         listarAdyacentesAux(adyacente, listaAdyacentes);

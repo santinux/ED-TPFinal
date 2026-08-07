@@ -23,16 +23,16 @@ H;22;Sala de Estar;1;20;true
 H;4;Bodega;-1;20;false
 H;6;Cocina;0;15;false
 H;5;Cochera;0;20;true
-E;Los Valientes;400;0;0;0
-E;Los Locos Adams;400;0;0;0
-E;Los Aldeanos;400;0;0;0
-E;Los Paisanos;400;0;0;0
-E;Los Asirios;400;0;0;0
-E;Los Griegos;400;0;0;0
-E;Los Romanos;400;0;0;0
-E;Los Mongoles;400;0;0;0
-E;Los Turcos;400;0;0;0
-E;Los Aztecas;400;0;0;0
+E;Los Valientes;400;0;21;0
+E;Los Locos Adams;400;0;21;0
+E;Los Aldeanos;400;0;21;0
+E;Los Paisanos;400;0;21;0
+E;Los Asirios;400;0;21;0
+E;Los Griegos;400;0;21;0
+E;Los Romanos;400;0;21;0
+E;Los Mongoles;400;0;21;0
+E;Los Turcos;400;0;21;0
+E;Los Aztecas;400;0;21;0
 D;98;Sudoku;Matemático
 D;89;Acertijo;Lógico
 D;84;Trabado;Ingenio
@@ -58,7 +58,7 @@ D;93;Ahorcado;Letras
 D;97;Objetos Escondidos;Búsqueda
 D;95;Shark Attack;Destreza
 D;400;Ganador;Debug
-P;21;18;10
+P;21;18;16
 P;18;2;40
 P;18;7;45
 P;18;2;40

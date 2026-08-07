@@ -46,6 +46,11 @@ public class Equipo
                 this.puntajeAcumulado = puntajeAcumulado;
         }
         
+        public int getPuntajeExigido()
+        {
+                return (this.puntajeExigido);
+        }
+        
         @Override
         public String toString()
         {

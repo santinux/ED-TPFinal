@@ -21,6 +21,11 @@ public class Habitacion implements Comparable
                 return (this.codigo);
         }
         
+        public String getNombre()
+        {
+                return (this.nombre);
+        }
+        
         public void setNombre(String unNombre)
         {
                 this.nombre = unNombre;

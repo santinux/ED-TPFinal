@@ -75,6 +75,7 @@ public class Juego
                                         int puntajeHabitacion = Integer.parseInt(st.nextToken());
                                         Equipo equipo = new Equipo(nombreEquipo, puntajeExigido, puntajeAcumulado, habitacionActual, puntajeHabitacion);
                                         equipos.put(nombreEquipo, equipo);
+                                        desafiosResueltos.put(nombreEquipo, new Lista());
                                         log("Carga de equipo: " + equipo);
                                         break;
                                 case "D":
@@ -97,7 +98,7 @@ public class Juego
                                         Habitacion habitacionSalida = obtenerHabitacion(puertaSalida, listaHabitaciones);
                                         casona.insertarArco(habitacionEntrada, habitacionSalida, puntajeRequerido);
                                         casona.insertarArco(habitacionSalida, habitacionEntrada, puntajeRequerido);
-                                        log("Carga de puerta: " + puertaEntrada + " -> " + puertaSalida);
+                                        log("Carga de puerta (arco): " + puertaEntrada + " -> " + puertaSalida);
                                         break;
                                 }
                         }
@@ -152,6 +153,86 @@ public class Juego
                         }
                 } else {
                         System.out.println("Código inválido");
+                }
+        }
+        
+        private void habitacionesContiguas()
+        {
+                //TODO
+        }
+        
+        private void esPosibleLlegar()
+        {
+                //TODO
+        }
+        
+        private void minimoPuntaje()
+        {
+                System.out.print("Ingrese el código de la habitación de origen: ");
+                int codOrigen = scan.nextInt();
+                System.out.print("Ingrese el código de la habitación de destino: ");
+                int codDestino = scan.nextInt();
+                
+                Lista habLista = habitaciones.listar();
+                Habitacion habOrigen = obtenerHabitacion(codOrigen, habLista);
+                Habitacion habDestino = obtenerHabitacion(codDestino, habLista);
+                if (habOrigen != null && habDestino != null) {
+                        Lista camino = casona.minimoPuntaje(habOrigen, habDestino);
+                        if (!camino.esVacia()) {
+                                System.out.println("Camino de habitaciones: ");
+                                for (int i = 1; i <= camino.longitud(); i++) {
+                                        Habitacion h = (Habitacion) camino.recuperar(i);
+                                        System.out.print("[ " + h.getCodigo() + " - " + h.getNombre() + " ]");
+                                        if (i < camino.longitud()) {
+                                                System.out.print("->");
+                                        }
+                                }
+                                System.out.println();
+                        }
+                } else {
+                        System.out.println("Alguno de los códigos ingresados no exite.");
+                }
+        }
+        
+        private void sinPasarPor()
+        {
+                System.out.print("Ingrese el código de la habitación de origen: ");
+                int codOri = scan.nextInt();
+                System.out.print("Ingrese el código de la habitación de destino: ");
+                int codDest = scan.nextInt();
+                System.out.print("Ingrese el código de la habitación a evitar: ");
+                int codEvitar = scan.nextInt();
+                System.out.print("Ingrese el puntaje máximo permitido: ");
+                int puntajeMax = scan.nextInt();
+                
+                Lista habLista = habitaciones.listar();
+                Habitacion habOrigen = obtenerHabitacion(codOri, habLista);
+                Habitacion habDestino = obtenerHabitacion(codDest, habLista);
+                Habitacion habEvitar = obtenerHabitacion(codEvitar, habLista);
+                
+                if (habOrigen != null && habDestino != null) {
+                        Lista caminosValidos = casona.sinPasarPor(habOrigen, habDestino, habEvitar, puntajeMax);
+                        if (caminosValidos.esVacia()) {
+                                System.out.println("No se encontraron caminos que cumplan las condiciones");
+                        } else {
+                                System.out.println("Caminos posibles: ");
+                                // recorro la lista general de caminos
+                                for (int i = 1; i <= caminosValidos.longitud(); i++) {
+                                        Lista caminito = (Lista) caminosValidos.recuperar(i);
+                                        System.out.print("Opción " + i + " : ");
+                                        // recorro las habitaciones de cada camino
+                                        for (int j = 1; j <= caminito.longitud(); j++) {
+                                                Habitacion h = (Habitacion) caminito.recuperar(j);
+                                                System.out.print("[ " + h.getCodigo() + " - " + h.getNombre() + " ]");
+                                                if (j < caminito.longitud()) {
+                                                        System.out.print("->");
+                                                }
+                                        }
+                                        System.out.println();
+                                }
+                        }
+                } else {
+                        System.out.println("Alguno de los códigos ingresados no existen");
                 }
         }
         
@@ -259,6 +340,150 @@ public class Juego
                         }
                 } else {
                         System.out.println("Nombre inválido");
+                }
+        }
+        
+        private void posiblesDesafios()
+        {
+                System.out.print("Ingrese nombre de equipo: ");
+                scan.nextLine();
+                String nombreEquipo = scan.nextLine().trim();
+                System.out.print("Ingrese código de habitación: ");
+                int codigoHabitacion = scan.nextInt();
+                Equipo equipo = equipos.get(nombreEquipo);
+                Habitacion habitacion = obtenerHabitacion(codigoHabitacion, habitaciones.listar());
+                if (equipo != null && habitacion != null) {
+                        int codHabitacionActual = equipo.getHabitacionActual();
+                        Habitacion habitacionActual = obtenerHabitacion(codHabitacionActual, habitaciones.listar());
+                        Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacionActual);
+                        int posicion = habitacionesAdyacentes.localizar(habitacion);
+                        if (posicion != -1) {
+                                Habitacion habitacionAdyacente = (Habitacion) habitacionesAdyacentes.recuperar(posicion);
+                                int puntajeRequerido = (int) casona.obtenerEtiqueta(habitacionActual, habitacionAdyacente);
+                                Lista desafiosTotal = desafios.listar();
+                                Lista desafiosResueltosEquipo = desafiosResueltos.get(nombreEquipo);
+                                Lista desafiosPendientes = desafiosPendientes(desafiosTotal, desafiosResueltosEquipo);
+                                if (!desafiosPendientes.esVacia()) {
+                                        System.out.println("Posibles desafíos:");
+                                        while (!desafiosPendientes.esVacia()) {
+                                                Desafio desafio = (Desafio) desafiosPendientes.recuperar(1);
+                                                if ((desafio.getPuntaje() + equipo.getPuntajeAcumulado()) > puntajeRequerido)
+                                                        System.out.println(desafio);
+                                                desafiosPendientes.eliminar(1);
+                                        }
+                                }
+                        } else {
+                                System.out.println("Habitación no adyacente");
+                        }
+                } else {
+                        System.out.println("Equipo o habitación no encontrado");
+                }
+        }
+        
+        public Lista desafiosPendientes(Lista desafiosTotal, Lista desafiosResueltos) {
+                Lista desafiosTot = desafiosTotal.clone();
+                Lista pendientes = new Lista();
+                while (!desafiosTot.esVacia()) {
+                        Object desafio = desafiosTot.recuperar(1);
+                        if (desafiosResueltos.localizar(desafio) == -1) {
+                                pendientes.insertar(desafio, pendientes.longitud() + 1);
+                        }
+                        desafiosTot.eliminar(1);
+                }
+                return pendientes;
+        }
+        
+        private void jugarDesafio()
+        {
+                System.out.print("Ingrese nombre de equipo: ");
+                scan.nextLine();
+                String nombreEquipo = scan.nextLine().trim();
+                System.out.print("Ingrese nombre de desafío: ");
+                String nombreDesafio = scan.nextLine().trim();
+                Equipo equipo = equipos.get(nombreEquipo);
+                Desafio desafio = obtenerDesafio(nombreDesafio, desafios.listar());
+                if (equipo != null && desafio != null) {
+                        Lista listaDesafios = desafiosResueltos.get(nombreEquipo);
+                        if (listaDesafios != null) {
+                                if (listaDesafios.localizar(desafio) == -1) {
+                                        int puntajeDesafio = desafio.getPuntaje();
+                                        equipo.setPuntajeHabitacion(equipo.getPuntajeHabitacion() + puntajeDesafio);
+                                        equipo.setPuntajeAcumulado(equipo.getPuntajeAcumulado() + puntajeDesafio);
+                                        registrarDesafioResuelto(nombreEquipo, desafio);
+                                        System.out.println("El equipo " + nombreEquipo + " jugó " + nombreDesafio + " y ganó " + puntajeDesafio + " puntos!");
+                                        log("Equipo " + nombreEquipo + " jugó " + nombreDesafio + " y obtuvo " + puntajeDesafio + " puntos");
+                                } else {
+                                        System.out.println("Desafío ya resuelto por el equipo");
+                                }
+                        } else {
+                                System.out.println("El equipo no resolvió desafíos aún");
+                        }
+                } else {
+                        System.out.println("Equipo o desafío no encontrado");
+                }
+        }
+        
+        private void registrarDesafioResuelto(String unNombreEquipo, Desafio unDesafio)
+        {
+                Lista lista = desafiosResueltos.get(unNombreEquipo);
+                if (lista == null) {
+                        lista = new Lista();
+                        desafiosResueltos.put(unNombreEquipo, lista);
+                }
+                lista.insertar(unDesafio, lista.longitud() + 1);
+        }
+        
+        private void pasarAHabitacion()
+        {
+                System.out.print("Ingrese nombre del equipo: ");
+                scan.nextLine();
+                String nombreEquipo = scan.nextLine().trim();
+                System.out.print("Ingrese código de habitación: ");
+                int codigoHabitacion = scan.nextInt();
+                Equipo equipo = equipos.get(nombreEquipo);
+                Habitacion habitacion = obtenerHabitacion(codigoHabitacion, habitaciones.listar());
+                if (equipo != null && habitacion != null) {
+                        int codHabitacionActual = equipo.getHabitacionActual();
+                        Habitacion habitacionActual = obtenerHabitacion(codHabitacionActual, habitaciones.listar());
+                        Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacionActual);
+                        int posicion = habitacionesAdyacentes.localizar(habitacion);
+                        if (posicion != -1) {
+                                Habitacion habitacionAdyacente = (Habitacion) habitacionesAdyacentes.recuperar(posicion);
+                                int puntajeRequerido = (int) casona.obtenerEtiqueta(habitacionActual, habitacionAdyacente);
+                                if (equipo.getPuntajeAcumulado() >= puntajeRequerido) {
+                                        equipo.setHabitacionActual(habitacionAdyacente.getCodigo());
+                                        System.out.println("¡El equipo " + nombreEquipo + " ha pasado de habitación!");
+                                        log("Equipo " + nombreEquipo + " pasó a la habitación " + habitacionAdyacente.getCodigo());
+                                } else {
+                                        System.out.println("Habitación adyacente, pero puntaje insuficiente");
+                                }
+                        } else {
+                                System.out.println("La habitación no es adyacente");
+                        }
+                } else {
+                        System.out.println("Equipo o habitación no encontrado");
+                }
+        }
+        
+        private void puedeSalir()
+        {
+                System.out.print("Ingrese nombre del equipo: ");
+                scan.nextLine();
+                String nombreEquipo = scan.nextLine().trim();
+                Equipo equipo = equipos.get(nombreEquipo);
+                if (equipo != null) {
+                        Habitacion habitacionActual = obtenerHabitacion(equipo.getHabitacionActual(), habitaciones.listar());
+                        if (habitacionActual.tieneSalida()) {
+                                if (equipo.getPuntajeAcumulado() >= equipo.getPuntajeExigido()) {
+                                        System.out.println("¡Felicitaciones! El equipo " + nombreEquipo + " puede salir!");
+                                } else {
+                                        System.out.println("Puntaje insuficiente para salir :(");
+                                }
+                        } else {
+                                System.out.println("La habitación actual no tiene salida");
+                        }
+                } else {
+                        System.out.println("Equipo no encontrado");
                 }
         }
         
@@ -688,6 +913,18 @@ public class Juego
                         case 1:
                                 mostrarHabitacion();
                                 break;
+                        case 2:
+                                habitacionesContiguas();
+                                break;
+                        case 3:
+                                esPosibleLlegar();
+                                break;
+                        case 4:
+                                minimoPuntaje();
+                                break;
+                        case 5:
+                                sinPasarPor();
+                                break;
                         case 0:
                                 break;
                         default:
@@ -734,6 +971,18 @@ public class Juego
                         switch (opcion) {
                         case 1:
                                 mostrarEquipo();
+                                break;
+                        case 2:
+                                posiblesDesafios();
+                                break;
+                        case 3:
+                                jugarDesafio();
+                                break;
+                        case 4:
+                                pasarAHabitacion();
+                                break;
+                        case 5:
+                                puedeSalir();
                                 break;
                         case 0:
                                 break;

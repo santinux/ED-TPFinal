@@ -26,6 +26,11 @@ public class Desafio implements Comparable
                 return (this.tipo);
         }
         
+        public int getPuntaje()
+        {
+                return (this.puntaje);
+        }
+        
         @Override
         public int compareTo(Object unDesafio)
         {
