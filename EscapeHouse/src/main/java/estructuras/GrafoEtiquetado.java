@@ -30,6 +30,8 @@ public class GrafoEtiquetado
         {
                 boolean exito = false;
                 if (this.inicio != null) {
+                        // Almacenar adyacentes para luego eliminar arcos asociados
+                        Lista adyacentes = listarAdyacentes(unElemento);
                         if (this.inicio.getElemento().equals(unElemento)) {
                                 // El elemento está en el vértice inicial
                                 this.inicio = this.inicio.getSiguienteVertice();
@@ -43,12 +45,12 @@ public class GrafoEtiquetado
                                         exito = true;
                                 }
                         }
-                }
-                if (exito) {
-                        NodoVertice nodo = this.inicio;
-                        while (nodo != null) {
-                                eliminarArco(nodo.getElemento(), unElemento);
-                                nodo = nodo.getSiguienteVertice();
+                        if (exito) {
+                                // Eliminar los arcos asociados al vértice
+                                while (!adyacentes.esVacia()) {
+                                        eliminarArco(adyacentes.recuperar(1), unElemento);
+                                        adyacentes.eliminar(1);
+                                }
                         }
                 }
                 return (exito);
