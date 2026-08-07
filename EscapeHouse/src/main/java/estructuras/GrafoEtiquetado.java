@@ -222,34 +222,34 @@ public class GrafoEtiquetado
                 if (existeVertice(unVerticeOrigen) && existeVertice(unVerticeDestino)) {
                         Lista visitados = new Lista();
                         NodoVertice verticeOrigen = obtenerNodoVertice(this.inicio, unVerticeOrigen);
-                        esPosible = existeCaminoCostoAux(verticeOrigen, unVerticeDestino, visitados, costoMaximo, 0);
+                        int costo = existeCaminoCostoAux(verticeOrigen, unVerticeDestino, visitados, 0);
+                        if (costo != -1 && costo <= costoMaximo) {
+                                esPosible = true;
+                        }
                 }
                 return (esPosible);
         }
         
-        private boolean existeCaminoCostoAux(NodoVertice unNodoVertice, Object unVerticeDestino, Lista visitados, int costoMaximo, int costoAcumulado)
+        private int existeCaminoCostoAux(NodoVertice unNodoVertice, Object unVerticeDestino, Lista visitados, int costoAcumulado)
         {
-                boolean existe = false;
+                int costoActual = -1;
                 if (unNodoVertice != null && (visitados.localizar(unNodoVertice.getElemento()) < 0)) {
                         if (unNodoVertice.getElemento().equals(unVerticeDestino)) {
-                                existe = true;
+                                costoActual = 0;
                         } else {
                                 visitados.insertar(unNodoVertice.getElemento(), visitados.longitud() + 1);
                                 NodoAdyacente adyacente = unNodoVertice.getPrimerAdyacente();
-                                while (adyacente != null && !existe) {
-                                        NodoVertice vecino = adyacente.getVertice();
-                                        int costoNuevo = costoAcumulado + (int) adyacente.getEtiqueta();
-                                        boolean noVisitado = visitados.localizar(vecino.getElemento()) == -1;
-                                        boolean costoValido = costoNuevo <= costoMaximo;
-                                        if (noVisitado && costoValido) {
-                                                existe = existeCaminoCostoAux(vecino, unVerticeDestino, visitados, costoMaximo, costoNuevo);
+                                while (adyacente != null && costoActual == -1) {
+                                        costoActual = existeCaminoCostoAux(adyacente.getVertice(), unVerticeDestino, visitados, costoAcumulado);
+                                        if (costoActual != -1) {
+                                                costoActual += (int) adyacente.getEtiqueta();
+                                        } else {
+                                                adyacente = adyacente.getSiguienteAdyacente();
                                         }
-                                        adyacente = adyacente.getSiguienteAdyacente();
                                 }
-                                visitados.eliminar(visitados.longitud());
                         }
                 }
-                return (existe);
+                return (costoActual);
         }
         
         public Lista minimoPuntaje(Object origen, Object unVerticeDestino) {

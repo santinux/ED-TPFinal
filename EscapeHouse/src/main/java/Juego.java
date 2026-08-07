@@ -190,8 +190,7 @@ public class Juego
                 Habitacion habDestino = obtenerHabitacion(codDestino, habLista);
                 
                 if (habOrigen != null && habDestino != null) {
-                        //if (casona.existeCaminoCosto(habOrigen, habDestino, k)) {
-                        if (casona.existeCamino(habOrigen, habDestino)) {
+                        if (casona.existeCaminoCosto(habOrigen, habDestino, k)) {
                                 System.out.println("Es posible llegar");
                         } else {
                                 System.out.println("No es posible llegar");
