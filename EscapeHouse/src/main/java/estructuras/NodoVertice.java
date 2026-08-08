@@ -1,5 +1,11 @@
 package estructuras;
 
+/**
+ * Implementación del TDA Nodo Vértice para Grafo.
+ *
+ * @author <a href="https://www.github.com/santinux">Santino Fuentes</a>
+ * @version 1.0
+ */
 public class NodoVertice
 {
         private Object elemento;

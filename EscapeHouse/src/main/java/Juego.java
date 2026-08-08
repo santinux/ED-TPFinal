@@ -7,12 +7,22 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+/**
+ * Implementación del juego Escape House, correspondiente al trabajo final de
+ * la materia:
+ * Estructuras de Datos, Facultad de Informatica,
+ * Universidad Nacional del Comahue,
+ * 2026.
+ *
+ * @author <a href="https://www.github.com/santinux">Santino Fuentes</a>
+ * @version 1.0
+ */
 public class Juego
 {
         private ArbolAVL habitaciones;
         private ArbolAVL desafios;
         private GrafoEtiquetado casona;
-        private HashMap<String,Equipo> equipos;
+        private HashMap<String, Equipo> equipos;
         private HashMap<String, Lista> desafiosResueltos;
         private static Scanner scan;
         
@@ -29,8 +39,7 @@ public class Juego
         private static void log(String unString)
         {
                 try (FileWriter fw = new FileWriter("data/logs.dat", true);
-                        BufferedWriter writer = new BufferedWriter(fw))
-                {
+                     BufferedWriter writer = new BufferedWriter(fw)) {
                         LocalDateTime ahora = LocalDateTime.now();
                         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss");
                         String fecha = ahora.format(formato);
@@ -48,58 +57,57 @@ public class Juego
         private void cargarDatos()
         {
                 try (FileReader archivo = new FileReader("data/carga_inicial.dat");
-                        BufferedReader buffer = new BufferedReader(archivo))
-                {
+                     BufferedReader buffer = new BufferedReader(archivo)) {
                         String linea = null;
                         while ((linea = buffer.readLine()) != null) {
                                 StringTokenizer st = new StringTokenizer(linea, ";");
-                                switch(st.nextToken()) {
-                                case "H":
-                                        // Cargar habitaciones
-                                        int codigo = Integer.parseInt(st.nextToken());
-                                        String nombre = st.nextToken();
-                                        int planta = Integer.parseInt(st.nextToken());
-                                        double metrosCuadrados = Double.parseDouble(st.nextToken());
-                                        boolean tieneSalida = Boolean.parseBoolean(st.nextToken());
-                                        Habitacion habitacion = new Habitacion(codigo, nombre, planta, metrosCuadrados, tieneSalida);
-                                        habitaciones.insertar(habitacion);
-                                        casona.insertarVertice(habitacion);
-                                        log("Carga de habitación: " + habitacion.toString());
-                                        break;
-                                case "E":
-                                        // Cargar equipos
-                                        String nombreEquipo = st.nextToken();
-                                        int puntajeExigido = Integer.parseInt(st.nextToken());
-                                        int puntajeAcumulado = Integer.parseInt(st.nextToken());
-                                        int habitacionActual = Integer.parseInt(st.nextToken());
-                                        int puntajeHabitacion = Integer.parseInt(st.nextToken());
-                                        Equipo equipo = new Equipo(nombreEquipo, puntajeExigido, puntajeAcumulado, habitacionActual, puntajeHabitacion);
-                                        equipos.put(nombreEquipo, equipo);
-                                        desafiosResueltos.put(nombreEquipo, new Lista());
-                                        log("Carga de equipo: " + equipo);
-                                        break;
-                                case "D":
-                                        // Cargar desafíos
-                                        int puntaje = Integer.parseInt(st.nextToken());
-                                        String nombreDesafio = st.nextToken();
-                                        String tipo = st.nextToken();
-                                        Desafio desafio = new Desafio(nombreDesafio, tipo, puntaje);
-                                        desafios.insertar(desafio);
-                                        log("Carga de desafío: " + desafio);
-                                        break;
-                                case "P":
-                                        // Cargar puertas
-                                        int puertaEntrada = Integer.parseInt(st.nextToken());
-                                        int puertaSalida = Integer.parseInt(st.nextToken());
-                                        int puntajeRequerido = Integer.parseInt(st.nextToken());
-                                        //Lista listaHabitaciones = casona.listarVertices();
-                                        Lista listaHabitaciones = habitaciones.listar();
-                                        Habitacion habitacionEntrada = obtenerHabitacion(puertaEntrada, listaHabitaciones);
-                                        Habitacion habitacionSalida = obtenerHabitacion(puertaSalida, listaHabitaciones);
-                                        casona.insertarArco(habitacionEntrada, habitacionSalida, puntajeRequerido);
-                                        casona.insertarArco(habitacionSalida, habitacionEntrada, puntajeRequerido);
-                                        log("Carga de puerta (arco): " + puertaEntrada + " -> " + puertaSalida);
-                                        break;
+                                switch (st.nextToken()) {
+                                        case "H":
+                                                // Cargar habitaciones
+                                                int codigo = Integer.parseInt(st.nextToken());
+                                                String nombre = st.nextToken();
+                                                int planta = Integer.parseInt(st.nextToken());
+                                                double metrosCuadrados = Double.parseDouble(st.nextToken());
+                                                boolean tieneSalida = Boolean.parseBoolean(st.nextToken());
+                                                Habitacion habitacion = new Habitacion(codigo, nombre, planta, metrosCuadrados, tieneSalida);
+                                                habitaciones.insertar(habitacion);
+                                                casona.insertarVertice(habitacion);
+                                                log("Carga de habitación: " + habitacion.toString());
+                                                break;
+                                        case "E":
+                                                // Cargar equipos
+                                                String nombreEquipo = st.nextToken();
+                                                int puntajeExigido = Integer.parseInt(st.nextToken());
+                                                int puntajeAcumulado = Integer.parseInt(st.nextToken());
+                                                int habitacionActual = Integer.parseInt(st.nextToken());
+                                                int puntajeHabitacion = Integer.parseInt(st.nextToken());
+                                                Equipo equipo = new Equipo(nombreEquipo, puntajeExigido, puntajeAcumulado, habitacionActual, puntajeHabitacion);
+                                                equipos.put(nombreEquipo, equipo);
+                                                desafiosResueltos.put(nombreEquipo, new Lista());
+                                                log("Carga de equipo: " + equipo);
+                                                break;
+                                        case "D":
+                                                // Cargar desafíos
+                                                int puntaje = Integer.parseInt(st.nextToken());
+                                                String nombreDesafio = st.nextToken();
+                                                String tipo = st.nextToken();
+                                                Desafio desafio = new Desafio(nombreDesafio, tipo, puntaje);
+                                                desafios.insertar(desafio);
+                                                log("Carga de desafío: " + desafio);
+                                                break;
+                                        case "P":
+                                                // Cargar puertas
+                                                int puertaEntrada = Integer.parseInt(st.nextToken());
+                                                int puertaSalida = Integer.parseInt(st.nextToken());
+                                                int puntajeRequerido = Integer.parseInt(st.nextToken());
+                                                //Lista listaHabitaciones = casona.listarVertices();
+                                                Lista listaHabitaciones = habitaciones.listar();
+                                                Habitacion habitacionEntrada = obtenerHabitacion(puertaEntrada, listaHabitaciones);
+                                                Habitacion habitacionSalida = obtenerHabitacion(puertaSalida, listaHabitaciones);
+                                                casona.insertarArco(habitacionEntrada, habitacionSalida, puntajeRequerido);
+                                                casona.insertarArco(habitacionSalida, habitacionEntrada, puntajeRequerido);
+                                                log("Carga de puerta (arco): " + puertaEntrada + " -> " + puertaSalida);
+                                                break;
                                 }
                         }
                 } catch (FileNotFoundException ex) {
@@ -111,7 +119,8 @@ public class Juego
                 }
         }
         
-        private Habitacion obtenerHabitacion(int unCodigo, Lista unaLista){
+        private Habitacion obtenerHabitacion(int unCodigo, Lista unaLista)
+        {
                 Lista listaClon = unaLista.clone();
                 Habitacion encontrada = null;
                 while (!listaClon.esVacia() && encontrada == null) {
@@ -164,8 +173,8 @@ public class Juego
                                 while (!habitacionesAdyacentes.esVacia()) {
                                         Habitacion habitacionAdyacente = (Habitacion) habitacionesAdyacentes.recuperar(1);
                                         System.out.println("Código: " + habitacionAdyacente.getCodigo()
-                                                          + " Nombre: " + habitacionAdyacente.getNombre()
-                                                          + " Puntaje requerido: " + casona.obtenerEtiqueta(habitacion, habitacionAdyacente));
+                                                                   + " Nombre: " + habitacionAdyacente.getNombre()
+                                                                   + " Puntaje requerido: " + casona.obtenerEtiqueta(habitacion, habitacionAdyacente));
                                         habitacionesAdyacentes.eliminar(1);
                                 }
                         }
@@ -412,7 +421,8 @@ public class Juego
                 }
         }
         
-        public Lista desafiosPendientes(Lista desafiosTotal, Lista desafiosResueltos) {
+        public Lista desafiosPendientes(Lista desafiosTotal, Lista desafiosResueltos)
+        {
                 Lista desafiosTot = desafiosTotal.clone();
                 Lista pendientes = new Lista();
                 while (!desafiosTot.esVacia()) {
@@ -524,7 +534,7 @@ public class Juego
         
         private void crearHabitacion()
         {
-                int codigo = ((Habitacion) habitaciones.maximoElem()).getCodigo() + 1;
+                int codigo = ((Habitacion) habitaciones.maximoElemento()).getCodigo() + 1;
                 System.out.print("Ingrese nombre: ");
                 scan.nextLine();
                 String nombre = scan.nextLine().trim();
@@ -570,82 +580,87 @@ public class Juego
                                 System.out.print("Ingrese una opción: ");
                                 opcion = scan.nextShort();
                                 switch (opcion) {
-                                case 1:
-                                        System.out.print("Ingrese nuevo nombre: ");
-                                        scan.nextLine();
-                                        String nuevoNombre = scan.nextLine().trim();
-                                        habitacion.setNombre(nuevoNombre);
-                                        msj = "Se modifica el nombre de la habitación " + codigo;
-                                        System.out.println(msj);
-                                        log(msj);
-                                        break;
-                                case 2:
-                                        System.out.print("Ingrese nueva planta: ");
-                                        int nuevaPlanta = scan.nextInt();
-                                        if (nuevaPlanta > -2 && nuevaPlanta < 3) {
-                                                habitacion.setPlanta(nuevaPlanta);
-                                                msj = "Se modifica la planta de la habitación " + codigo;
+                                        case 1:
+                                                System.out.print("Ingrese nuevo nombre: ");
+                                                scan.nextLine();
+                                                String nuevoNombre = scan.nextLine().trim();
+                                                habitacion.setNombre(nuevoNombre);
+                                                msj = "Se modifica el nombre de la habitación " + codigo;
                                                 System.out.println(msj);
                                                 log(msj);
-                                        } else {
-                                                System.out.println("Planta inexistente");
-                                        }
-                                        break;
-                                case 3:
-                                        System.out.print("Ingrese nuevo área en metros cuadrados: ");
-                                        double nuevosMetrosCuadrados = scan.nextDouble();
-                                        if (nuevosMetrosCuadrados > 0) {
-                                                habitacion.setMetrosCuadrados(nuevosMetrosCuadrados);
-                                                msj = "Se modifica el área de la habitación " + codigo;
-                                                System.out.println(msj);
-                                                log(msj);
-                                        } else {
-                                                System.out.println("Ingrese un valor mayor a 0");
-                                        }
-                                        break;
-                                case 4:
-                                        System.out.print("Ingrese código de habitación contigua: ");
-                                        int codigoHabitacionContigua = scan.nextInt();
-                                        Habitacion habitacionContigua = obtenerHabitacion(codigoHabitacionContigua, habitaciones.listar());
-                                        if (habitacionContigua != null && !habitacionContigua.tieneSalida()) {
-                                                System.out.print("Ingrese puntaje requerido: ");
-                                                int puntajeRequerido = scan.nextInt();
-                                                boolean exito1 = casona.insertarArco(habitacion, habitacionContigua, puntajeRequerido);
-                                                boolean exito2 = casona.insertarArco(habitacionContigua, habitacion, puntajeRequerido);
-                                                if (exito1 && exito2) {
-                                                        msj = "Se crea puerta entre habitaciones " + codigo + " y " + codigoHabitacionContigua + " con puntaje " + puntajeRequerido;
+                                                break;
+                                        case 2:
+                                                System.out.print("Ingrese nueva planta: ");
+                                                int nuevaPlanta = scan.nextInt();
+                                                if (nuevaPlanta > -2 && nuevaPlanta < 3) {
+                                                        habitacion.setPlanta(nuevaPlanta);
+                                                        msj = "Se modifica la planta de la habitación " + codigo;
                                                         System.out.println(msj);
                                                         log(msj);
                                                 } else {
-                                                        System.out.println("No se pudo crear la puerta");
+                                                        System.out.println("Planta inexistente");
                                                 }
-                                        } else {
-                                                System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
-                                        }
-                                        break;
-                                case 5:
-                                        System.out.print("Ingrese código de habitación contigua: ");
-                                        int codigoHabitContigua = scan.nextInt();
-                                        Habitacion habitContigua = obtenerHabitacion(codigoHabitContigua, habitaciones.listar());
-                                        if (habitContigua != null && !habitContigua.tieneSalida()) {
-                                                boolean exito1 = casona.eliminarArco(habitacion, habitContigua);
-                                                boolean exito2 = casona.eliminarArco(habitContigua, habitacion);
-                                                if (exito1 && exito2) {
-                                                        msj = "Se elimina puerta entre habitaciones " + codigo + " y " + codigoHabitContigua;
+                                                break;
+                                        case 3:
+                                                System.out.print("Ingrese nuevo área en metros cuadrados: ");
+                                                double nuevosMetrosCuadrados = scan.nextDouble();
+                                                if (nuevosMetrosCuadrados > 0) {
+                                                        habitacion.setMetrosCuadrados(nuevosMetrosCuadrados);
+                                                        msj = "Se modifica el área de la habitación " + codigo;
                                                         System.out.println(msj);
                                                         log(msj);
                                                 } else {
-                                                        System.out.println("No se pudo eliminar la puerta");
+                                                        System.out.println("Ingrese un valor mayor a 0");
                                                 }
-                                        } else {
-                                                System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
-                                        }
-                                        break;
-                                case 0:
-                                        break;
-                                default:
-                                        System.out.println("Opción inválida");
-                                        break;
+                                                break;
+                                        case 4:
+                                                System.out.print("Ingrese código de habitación contigua: ");
+                                                int codigoHabitacionContigua = scan.nextInt();
+                                                if (codigoHabitacionContigua != codigo) {
+                                                        Habitacion habitacionContigua = obtenerHabitacion(codigoHabitacionContigua, habitaciones.listar());
+                                                        if (habitacionContigua != null && !habitacionContigua.tieneSalida()) {
+                                                                System.out.print("Ingrese puntaje requerido: ");
+                                                                int puntajeRequerido = scan.nextInt();
+                                                                boolean exito1 = casona.insertarArco(habitacion, habitacionContigua, puntajeRequerido);
+                                                                boolean exito2 = casona.insertarArco(habitacionContigua, habitacion, puntajeRequerido);
+                                                                if (exito1 && exito2) {
+                                                                        msj = "Se crea puerta entre habitaciones " + codigo + " y " + codigoHabitacionContigua + " con puntaje " + puntajeRequerido;
+                                                                        System.out.println(msj);
+                                                                        log(msj);
+                                                                } else {
+                                                                        System.out.println("No se pudo crear la puerta");
+                                                                }
+                                                        } else {
+                                                                System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
+                                                        }
+                                                } else {
+                                                        System.out.println("En esta casa respetamos las leyes de la termodinámica");
+                                                        System.out.println("No se puede conectar una habitación con si misma >:(");
+                                                }
+                                                break;
+                                        case 5:
+                                                System.out.print("Ingrese código de habitación contigua: ");
+                                                int codigoHabitContigua = scan.nextInt();
+                                                Habitacion habitContigua = obtenerHabitacion(codigoHabitContigua, habitaciones.listar());
+                                                if (habitContigua != null && !habitContigua.tieneSalida()) {
+                                                        boolean exito1 = casona.eliminarArco(habitacion, habitContigua);
+                                                        boolean exito2 = casona.eliminarArco(habitContigua, habitacion);
+                                                        if (exito1 && exito2) {
+                                                                msj = "Se elimina puerta entre habitaciones " + codigo + " y " + codigoHabitContigua;
+                                                                System.out.println(msj);
+                                                                log(msj);
+                                                        } else {
+                                                                System.out.println("No se pudo eliminar la puerta");
+                                                        }
+                                                } else {
+                                                        System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
+                                                }
+                                                break;
+                                        case 0:
+                                                break;
+                                        default:
+                                                System.out.println("Opción inválida");
+                                                break;
                                 }
                         } while (opcion != 0);
                 } else {
@@ -915,20 +930,20 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                crearHabitacion();
-                                break;
-                        case 2:
-                                eliminarHabitacion();
-                                break;
-                        case 3:
-                                modificarHabitacion();
-                                break;
-                        case 0:
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
-                                break;
+                                case 1:
+                                        crearHabitacion();
+                                        break;
+                                case 2:
+                                        eliminarHabitacion();
+                                        break;
+                                case 3:
+                                        modificarHabitacion();
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
+                                        break;
                         }
                 } while (opcion != 0);
         }
@@ -941,20 +956,20 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                crearDesafio();
-                                break;
-                        case 2:
-                                eliminarDesafio();
-                                break;
-                        case 3:
-                                modificarDesafio();
-                                break;
-                        case 0:
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
-                                break;
+                                case 1:
+                                        crearDesafio();
+                                        break;
+                                case 2:
+                                        eliminarDesafio();
+                                        break;
+                                case 3:
+                                        modificarDesafio();
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
+                                        break;
                         }
                 } while (opcion != 0);
         }
@@ -967,20 +982,20 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                crearEquipo();
-                                break;
-                        case 2:
-                                eliminarEquipo();
-                                break;
-                        case 3:
-                                modificarEquipo();
-                                break;
-                        case 0:
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
-                                break;
+                                case 1:
+                                        crearEquipo();
+                                        break;
+                                case 2:
+                                        eliminarEquipo();
+                                        break;
+                                case 3:
+                                        modificarEquipo();
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
+                                        break;
                         }
                 } while (opcion != 0);
         }
@@ -993,25 +1008,25 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                mostrarHabitacion();
-                                break;
-                        case 2:
-                                habitacionesContiguas();
-                                break;
-                        case 3:
-                                esPosibleLlegar();
-                                break;
-                        case 4:
-                                minimoPuntaje();
-                                break;
-                        case 5:
-                                sinPasarPor();
-                                break;
-                        case 0:
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
+                                case 1:
+                                        mostrarHabitacion();
+                                        break;
+                                case 2:
+                                        habitacionesContiguas();
+                                        break;
+                                case 3:
+                                        esPosibleLlegar();
+                                        break;
+                                case 4:
+                                        minimoPuntaje();
+                                        break;
+                                case 5:
+                                        sinPasarPor();
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
                         }
                 } while (opcion != 0);
         }
@@ -1024,22 +1039,22 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                mostrarDesafio();
-                                break;
-                        case 2:
-                                mostrarDesafiosResueltos();
-                                break;
-                        case 3:
-                                verificarDesafioResuelto();
-                                break;
-                        case 4:
-                                mostrarDesafiosTipo();
-                                break;
-                        case 0:
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
+                                case 1:
+                                        mostrarDesafio();
+                                        break;
+                                case 2:
+                                        mostrarDesafiosResueltos();
+                                        break;
+                                case 3:
+                                        verificarDesafioResuelto();
+                                        break;
+                                case 4:
+                                        mostrarDesafiosTipo();
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
                         }
                 } while (opcion != 0);
         }
@@ -1052,25 +1067,25 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                mostrarEquipo();
-                                break;
-                        case 2:
-                                posiblesDesafios();
-                                break;
-                        case 3:
-                                jugarDesafio();
-                                break;
-                        case 4:
-                                pasarAHabitacion();
-                                break;
-                        case 5:
-                                puedeSalir();
-                                break;
-                        case 0:
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
+                                case 1:
+                                        mostrarEquipo();
+                                        break;
+                                case 2:
+                                        posiblesDesafios();
+                                        break;
+                                case 3:
+                                        jugarDesafio();
+                                        break;
+                                case 4:
+                                        pasarAHabitacion();
+                                        break;
+                                case 5:
+                                        puedeSalir();
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
                         }
                 } while (opcion != 0);
         }
@@ -1099,41 +1114,41 @@ public class Juego
                         System.out.print("Ingrese una opción: ");
                         opcion = scan.nextShort();
                         switch (opcion) {
-                        case 1:
-                                if (datosCargados) {
-                                        System.out.println("Ya se han cargado los datos de prueba");
-                                } else {
-                                        cargarDatos();
-                                        datosCargados = true;
-                                }
-                                break;
-                        case 2:
-                                habitacionesABM();
-                                break;
-                        case 3:
-                                desafiosABM();
-                                break;
-                        case 4:
-                                equiposABM();
-                                break;
-                        case 5:
-                                consultasHabitaciones();
-                                break;
-                        case 6:
-                                consultasDesafios();
-                                break;
-                        case 7:
-                                consultasEquipos();
-                                break;
-                        case 8:
-                                mostrarSistema();
-                                break;
-                        case 0:
-                                System.out.println("Fin del juego.");
-                                break;
-                        default:
-                                System.out.println("Opción inválida");
-                                break;
+                                case 1:
+                                        if (datosCargados) {
+                                                System.out.println("Ya se han cargado los datos de prueba");
+                                        } else {
+                                                cargarDatos();
+                                                datosCargados = true;
+                                        }
+                                        break;
+                                case 2:
+                                        habitacionesABM();
+                                        break;
+                                case 3:
+                                        desafiosABM();
+                                        break;
+                                case 4:
+                                        equiposABM();
+                                        break;
+                                case 5:
+                                        consultasHabitaciones();
+                                        break;
+                                case 6:
+                                        consultasDesafios();
+                                        break;
+                                case 7:
+                                        consultasEquipos();
+                                        break;
+                                case 8:
+                                        mostrarSistema();
+                                        break;
+                                case 0:
+                                        System.out.println("Fin del juego.");
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
+                                        break;
                         }
                 } while (opcion != 0);
         }

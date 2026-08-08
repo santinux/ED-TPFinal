@@ -1,5 +1,11 @@
 package estructuras;
 
+/**
+ * Implementación del TDA Nodo Adyacente para Grafo Etiquetado.
+ *
+ * @author <a href="https://www.github.com/santinux">Santino Fuentes</a>
+ * @version 1.0
+ */
 public class NodoAdyacente
 {
         private Object etiqueta;
