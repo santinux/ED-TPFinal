@@ -144,15 +144,11 @@ public class Juego
         {
                 System.out.print("Ingrese el código: ");
                 int codigo = scan.nextInt();
-                if (codigo > 0 && codigo < 100) {
-                        Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
-                        if (habitacion != null) {
-                                System.out.println(habitacion);
-                        } else {
-                                System.out.println("Habitación no encontrada");
-                        }
+                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                if (habitacion != null) {
+                        System.out.println(habitacion);
                 } else {
-                        System.out.println("Código inválido");
+                        System.out.println("Habitación no encontrada");
                 }
         }
         
@@ -163,8 +159,8 @@ public class Juego
                 Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
                 if (habitacion != null) {
                         Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacion);
+                        System.out.println("Habitaciones contiguas: ");
                         if (!habitacionesAdyacentes.esVacia()) {
-                                System.out.println("Habitaciones contiguas: ");
                                 while (!habitacionesAdyacentes.esVacia()) {
                                         Habitacion habitacionAdyacente = (Habitacion) habitacionesAdyacentes.recuperar(1);
                                         System.out.println("Código: " + habitacionAdyacente.getCodigo()
@@ -173,6 +169,8 @@ public class Juego
                                         habitacionesAdyacentes.eliminar(1);
                                 }
                         }
+                } else {
+                        System.out.println("Habitación no encontrada");
                 }
         }
         
@@ -444,8 +442,9 @@ public class Juego
                                         equipo.setPuntajeHabitacion(equipo.getPuntajeHabitacion() + puntajeDesafio);
                                         equipo.setPuntajeAcumulado(equipo.getPuntajeAcumulado() + puntajeDesafio);
                                         registrarDesafioResuelto(nombreEquipo, desafio);
-                                        System.out.println("El equipo " + nombreEquipo + " jugó " + nombreDesafio + " y ganó " + puntajeDesafio + " puntos!");
-                                        log("Equipo " + nombreEquipo + " jugó " + nombreDesafio + " y obtuvo " + puntajeDesafio + " puntos");
+                                        String msj = "Equipo " + nombreEquipo + " jugó " + nombreDesafio + " y obtuvo " + puntajeDesafio + " puntos";
+                                        System.out.println(msj);
+                                        log(msj);
                                 } else {
                                         System.out.println("Desafío ya resuelto por el equipo");
                                 }
@@ -487,8 +486,9 @@ public class Juego
                                 if (equipo.getPuntajeAcumulado() >= puntajeRequerido) {
                                         equipo.setHabitacionActual(habitacionAdyacente.getCodigo());
                                         equipo.setPuntajeHabitacion(0);
-                                        System.out.println("¡El equipo " + nombreEquipo + " ha pasado de habitación!");
-                                        log("Equipo " + nombreEquipo + " pasó a la habitación " + habitacionAdyacente.getCodigo());
+                                        String msj = "Equipo " + equipo + " pasó a la habitación " + habitacionAdyacente.getCodigo();
+                                        System.out.println(msj);
+                                        log(msj);
                                 } else {
                                         System.out.println("Habitación adyacente, pero puntaje insuficiente");
                                 }
@@ -535,30 +535,25 @@ public class Juego
                 Habitacion habitacion = new Habitacion(codigo, nombre, planta, metrosCuadrados, false);
                 habitaciones.insertar(habitacion);
                 casona.insertarVertice(habitacion);
-                log("Se crea habitación: " + habitacion);
-                System.out.print("Ingrese código de habitación contigua: ");
-                int codigoContigua = scan.nextInt();
-                System.out.print("Ingrese puntaje requerido: ");
-                int puntajeRequerido = scan.nextInt();
-                Habitacion habitacionContigua = obtenerHabitacion(codigoContigua, habitaciones.listar());
-                casona.insertarArco(habitacion, habitacionContigua, puntajeRequerido);
-                casona.insertarArco(habitacionContigua, habitacion, puntajeRequerido);
-                log("Carga de puerta (arco): " + codigo + " -> " + codigoContigua);
+                String msj = "Se crea habitación: " + habitacion;
+                System.out.println(msj);
+                log(msj);
+                System.out.println("Si desea conectarla a otras habitaciones, utilice la opción para modificar habitación");
         }
         
         private void eliminarHabitacion()
         {
                 System.out.print("Ingrese código: ");
                 int codigo = scan.nextInt();
-                if (codigo > 0 && codigo < 100) {
-                        Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
-                        if (habitacion != null && !habitacion.tieneSalida()) {
-                                habitaciones.eliminar(habitacion);
-                                casona.eliminarVertice(habitacion);
-                                log("Se elimina habitación: " + habitacion);
-                        }
+                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                if (habitacion != null && !habitacion.tieneSalida()) {
+                        habitaciones.eliminar(habitacion);
+                        casona.eliminarVertice(habitacion);
+                        String msj = "Se elimina habitación: " + habitacion;
+                        System.out.println(msj);
+                        log(msj);
                 } else {
-                        System.out.println("Código inválido");
+                        System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
                 }
         }
         
@@ -566,53 +561,95 @@ public class Juego
         {
                 System.out.print("Ingrese código: ");
                 int codigo = scan.nextInt();
-                if (codigo > 0 && codigo < 100) {
-                        Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
-                        if (habitacion != null && !habitacion.tieneSalida()) {
-                                short opcion;
-                                do {
-                                        mostrarMenuModificarHabitacion();
-                                        System.out.print("Ingrese una opción: ");
-                                        opcion = scan.nextShort();
-                                        switch (opcion) {
-                                        case 1:
-                                                System.out.print("Ingrese nuevo nombre: ");
-                                                scan.nextLine();
-                                                String nuevoNombre = scan.nextLine().trim();
-                                                habitacion.setNombre(nuevoNombre);
-                                                log("Se modifica el nombre de la habitación " + codigo);
-                                                break;
-                                        case 2:
-                                                System.out.print("Ingrese nueva planta: ");
-                                                int nuevaPlanta = scan.nextInt();
-                                                if (nuevaPlanta > -2 && nuevaPlanta < 3) {
-                                                        habitacion.setPlanta(nuevaPlanta);
-                                                        log("Se modifica la planta de la habitación " + codigo);
-                                                } else {
-                                                        System.out.println("Planta inexistente");
-                                                }
-                                                break;
-                                        case 3:
-                                                System.out.print("Ingrese nuevo área en metros cuadrados: ");
-                                                double nuevosMetrosCuadrados = scan.nextDouble();
-                                                if (nuevosMetrosCuadrados > 0) {
-                                                        habitacion.setMetrosCuadrados(nuevosMetrosCuadrados);
-                                                        log("Se modifica el área de la habitación " + codigo);
-                                                } else {
-                                                        System.out.println("Ingrese un valor mayor a 0");
-                                                }
-                                        case 0:
-                                                break;
-                                        default:
-                                                System.out.println("Opción inválida");
-                                                break;
+                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                if (habitacion != null && !habitacion.tieneSalida()) {
+                        short opcion;
+                        do {
+                                mostrarMenuModificarHabitacion();
+                                String msj;
+                                System.out.print("Ingrese una opción: ");
+                                opcion = scan.nextShort();
+                                switch (opcion) {
+                                case 1:
+                                        System.out.print("Ingrese nuevo nombre: ");
+                                        scan.nextLine();
+                                        String nuevoNombre = scan.nextLine().trim();
+                                        habitacion.setNombre(nuevoNombre);
+                                        msj = "Se modifica el nombre de la habitación " + codigo;
+                                        System.out.println(msj);
+                                        log(msj);
+                                        break;
+                                case 2:
+                                        System.out.print("Ingrese nueva planta: ");
+                                        int nuevaPlanta = scan.nextInt();
+                                        if (nuevaPlanta > -2 && nuevaPlanta < 3) {
+                                                habitacion.setPlanta(nuevaPlanta);
+                                                msj = "Se modifica la planta de la habitación " + codigo;
+                                                System.out.println(msj);
+                                                log(msj);
+                                        } else {
+                                                System.out.println("Planta inexistente");
                                         }
-                                } while (opcion != 0);
-                        } else {
-                                System.out.println("Habitación no modificable");
-                        }
+                                        break;
+                                case 3:
+                                        System.out.print("Ingrese nuevo área en metros cuadrados: ");
+                                        double nuevosMetrosCuadrados = scan.nextDouble();
+                                        if (nuevosMetrosCuadrados > 0) {
+                                                habitacion.setMetrosCuadrados(nuevosMetrosCuadrados);
+                                                msj = "Se modifica el área de la habitación " + codigo;
+                                                System.out.println(msj);
+                                                log(msj);
+                                        } else {
+                                                System.out.println("Ingrese un valor mayor a 0");
+                                        }
+                                        break;
+                                case 4:
+                                        System.out.print("Ingrese código de habitación contigua: ");
+                                        int codigoHabitacionContigua = scan.nextInt();
+                                        Habitacion habitacionContigua = obtenerHabitacion(codigoHabitacionContigua, habitaciones.listar());
+                                        if (habitacionContigua != null && !habitacionContigua.tieneSalida()) {
+                                                System.out.print("Ingrese puntaje requerido: ");
+                                                int puntajeRequerido = scan.nextInt();
+                                                boolean exito1 = casona.insertarArco(habitacion, habitacionContigua, puntajeRequerido);
+                                                boolean exito2 = casona.insertarArco(habitacionContigua, habitacion, puntajeRequerido);
+                                                if (exito1 && exito2) {
+                                                        msj = "Se crea puerta entre habitaciones " + codigo + " y " + codigoHabitacionContigua + " con puntaje " + puntajeRequerido;
+                                                        System.out.println(msj);
+                                                        log(msj);
+                                                } else {
+                                                        System.out.println("No se pudo crear la puerta");
+                                                }
+                                        } else {
+                                                System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
+                                        }
+                                        break;
+                                case 5:
+                                        System.out.print("Ingrese código de habitación contigua: ");
+                                        int codigoHabitContigua = scan.nextInt();
+                                        Habitacion habitContigua = obtenerHabitacion(codigoHabitContigua, habitaciones.listar());
+                                        if (habitContigua != null && !habitContigua.tieneSalida()) {
+                                                boolean exito1 = casona.eliminarArco(habitacion, habitContigua);
+                                                boolean exito2 = casona.eliminarArco(habitContigua, habitacion);
+                                                if (exito1 && exito2) {
+                                                        msj = "Se elimina puerta entre habitaciones " + codigo + " y " + codigoHabitContigua;
+                                                        System.out.println(msj);
+                                                        log(msj);
+                                                } else {
+                                                        System.out.println("No se pudo eliminar la puerta");
+                                                }
+                                        } else {
+                                                System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
+                                        }
+                                        break;
+                                case 0:
+                                        break;
+                                default:
+                                        System.out.println("Opción inválida");
+                                        break;
+                                }
+                        } while (opcion != 0);
                 } else {
-                        System.out.println("Código inválido");
+                        System.out.println("Habitación no encontrada o tiene salida (no se puede eliminar)");
                 }
         }
         
@@ -811,6 +848,8 @@ public class Juego
                 System.out.println("1) Modificar nombre");
                 System.out.println("2) Modificar planta");
                 System.out.println("3) Modificar metros cuadrados");
+                System.out.println("4) Agregar habitación contigua");
+                System.out.println("5) Quitar habitación contigua");
                 System.out.println("0) Volver");
                 System.out.println("----------------------------------------");
         }
@@ -1052,7 +1091,7 @@ public class Juego
         
         public void iniciar()
         {
-                cargarDatos(); // Eliminar cuando esté listo el juego
+                boolean datosCargados = false;
                 System.out.println("-------------[ESCAPE HOUSE]-------------");
                 short opcion;
                 do {
@@ -1061,7 +1100,12 @@ public class Juego
                         opcion = scan.nextShort();
                         switch (opcion) {
                         case 1:
-                                cargarDatos();
+                                if (datosCargados) {
+                                        System.out.println("Ya se han cargado los datos de prueba");
+                                } else {
+                                        cargarDatos();
+                                        datosCargados = true;
+                                }
                                 break;
                         case 2:
                                 habitacionesABM();
