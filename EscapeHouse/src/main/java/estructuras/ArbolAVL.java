@@ -396,6 +396,40 @@ public class ArbolAVL implements Cloneable
                 return (exito);
         }
         
+        /**
+         * Parece redundante, pero es útil si se busca un elemento solo con
+         * la clave para comparar.
+         *
+         * @param unElemento El elemento a buscar, solo con una clave para comparar.
+         * @return El elemento correspondiente al elemento buscado, o null si no se encuentra.
+         */
+        public Comparable obtenerElemento(Comparable unElemento)
+        {
+                Comparable elemento = null;
+                if (this.raiz != null)
+                        elemento = obtenerElementoAux(this.raiz, unElemento);
+                return (elemento);
+        }
+        
+        private Comparable obtenerElementoAux(NodoAVL unNodo, Comparable unElemento)
+        {
+                Comparable elemento = null;
+                int comparacion = unElemento.compareTo(unNodo.getElemento());
+                if (unNodo != null) {
+                        if (comparacion == 0) {
+                                // El elemento en el nodo actual coincide con el buscado
+                                elemento = unNodo.getElemento();
+                        } else if (comparacion < 0) {
+                                // El elemento a buscar es menor que el elemento del nodo actual
+                                elemento = obtenerElementoAux(unNodo.getHijoIzquierdo(), unElemento);
+                        } else {
+                                // El elemento a buscar es mayor que el elemento del nodo actual
+                                elemento = obtenerElementoAux(unNodo.getHijoDerecho(), unElemento);
+                        }
+                }
+                return (elemento);
+        }
+        
         public Comparable minimoElemento()
         {
                 return (minimoElementoAux(this.raiz));

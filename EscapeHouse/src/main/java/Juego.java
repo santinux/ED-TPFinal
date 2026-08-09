@@ -100,10 +100,8 @@ public class Juego
                                                 int puertaEntrada = Integer.parseInt(st.nextToken());
                                                 int puertaSalida = Integer.parseInt(st.nextToken());
                                                 int puntajeRequerido = Integer.parseInt(st.nextToken());
-                                                //Lista listaHabitaciones = casona.listarVertices();
-                                                Lista listaHabitaciones = habitaciones.listar();
-                                                Habitacion habitacionEntrada = obtenerHabitacion(puertaEntrada, listaHabitaciones);
-                                                Habitacion habitacionSalida = obtenerHabitacion(puertaSalida, listaHabitaciones);
+                                                Habitacion habitacionEntrada = obtenerHabitacion(puertaEntrada);
+                                                Habitacion habitacionSalida = obtenerHabitacion(puertaSalida);
                                                 casona.insertarArco(habitacionEntrada, habitacionSalida, puntajeRequerido);
                                                 casona.insertarArco(habitacionSalida, habitacionEntrada, puntajeRequerido);
                                                 log("Carga de puerta (arco): " + puertaEntrada + " -> " + puertaSalida);
@@ -119,21 +117,31 @@ public class Juego
                 }
         }
         
-        private Habitacion obtenerHabitacion(int unCodigo, Lista unaLista)
+        /**
+         * Busca y retorna la habitación corespondiente al código dado.
+         * Se utiliza la búsqueda eficiente de Árbol AVL buscando con la clave
+         * de comparación que es el código de habitación.
+         *
+         * @param unCodigo
+         * @return Una habitación o null si no se encuentra (el null lo retorna
+         * el metodo de Árbol AVL.
+         */
+        private Habitacion obtenerHabitacion(int unCodigo)
         {
-                Lista listaClon = unaLista.clone();
-                Habitacion encontrada = null;
-                while (!listaClon.esVacia() && encontrada == null) {
-                        Habitacion aux = (Habitacion) listaClon.recuperar(1);
-                        if (aux.getCodigo() == unCodigo) {
-                                encontrada = aux;
-                        } else {
-                                listaClon.eliminar(1);
-                        }
-                }
-                return (encontrada);
+                Habitacion habitacion = new Habitacion(unCodigo, "", 0, 0, false);
+                habitacion = (Habitacion) habitaciones.obtenerElemento(habitacion);
+                return (habitacion);
         }
         
+        /**
+         * Busca y retorna el desafío correspondiente al nombre dado.
+         * La búsqueda de esta manera y no como con habitaciones, se justifica
+         * porque la clave de comparación de desafío es su puntaje y no su nombre.
+         *
+         * @param unNombre
+         * @param unaLista
+         * @return Un desafío o null si no se encuentra.
+         */
         private Desafio obtenerDesafio(String unNombre, Lista unaLista)
         {
                 Lista listaClon = unaLista.clone();
@@ -153,7 +161,7 @@ public class Juego
         {
                 System.out.print("Ingrese el código: ");
                 int codigo = scan.nextInt();
-                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                Habitacion habitacion = obtenerHabitacion(codigo);
                 if (habitacion != null) {
                         System.out.println(habitacion);
                 } else {
@@ -165,7 +173,7 @@ public class Juego
         {
                 System.out.print("Ingrese código de habitación: ");
                 int codigo = scan.nextInt();
-                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                Habitacion habitacion = obtenerHabitacion(codigo);
                 if (habitacion != null) {
                         Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacion);
                         System.out.println("Habitaciones contiguas: ");
@@ -192,9 +200,8 @@ public class Juego
                 System.out.print("Ingrese el puntaje k a acumular: ");
                 int k = scan.nextInt();
                 
-                Lista habLista = habitaciones.listar();
-                Habitacion habOrigen = obtenerHabitacion(codOrigen, habLista);
-                Habitacion habDestino = obtenerHabitacion(codDestino, habLista);
+                Habitacion habOrigen = obtenerHabitacion(codOrigen);
+                Habitacion habDestino = obtenerHabitacion(codDestino);
                 
                 if (habOrigen != null && habDestino != null) {
                         if (casona.existeCaminoCosto(habOrigen, habDestino, k)) {
@@ -214,9 +221,8 @@ public class Juego
                 System.out.print("Ingrese el código de la habitación de destino: ");
                 int codDestino = scan.nextInt();
                 
-                Lista habLista = habitaciones.listar();
-                Habitacion habOrigen = obtenerHabitacion(codOrigen, habLista);
-                Habitacion habDestino = obtenerHabitacion(codDestino, habLista);
+                Habitacion habOrigen = obtenerHabitacion(codOrigen);
+                Habitacion habDestino = obtenerHabitacion(codDestino);
                 if (habOrigen != null && habDestino != null) {
                         Lista camino = casona.minimoPuntaje(habOrigen, habDestino);
                         if (!camino.esVacia()) {
@@ -246,10 +252,9 @@ public class Juego
                 System.out.print("Ingrese el puntaje máximo permitido: ");
                 int puntajeMax = scan.nextInt();
                 
-                Lista habLista = habitaciones.listar();
-                Habitacion habOrigen = obtenerHabitacion(codOri, habLista);
-                Habitacion habDestino = obtenerHabitacion(codDest, habLista);
-                Habitacion habEvitar = obtenerHabitacion(codEvitar, habLista);
+                Habitacion habOrigen = obtenerHabitacion(codOri);
+                Habitacion habDestino = obtenerHabitacion(codDest);
+                Habitacion habEvitar = obtenerHabitacion(codEvitar);
                 
                 if (habOrigen != null && habDestino != null) {
                         Lista caminosValidos = casona.sinPasarPor(habOrigen, habDestino, habEvitar, puntajeMax);
@@ -392,10 +397,10 @@ public class Juego
                 System.out.print("Ingrese código de habitación: ");
                 int codigoHabitacion = scan.nextInt();
                 Equipo equipo = equipos.get(nombreEquipo);
-                Habitacion habitacion = obtenerHabitacion(codigoHabitacion, habitaciones.listar());
+                Habitacion habitacion = obtenerHabitacion(codigoHabitacion);
                 if (equipo != null && habitacion != null) {
                         int codHabitacionActual = equipo.getHabitacionActual();
-                        Habitacion habitacionActual = obtenerHabitacion(codHabitacionActual, habitaciones.listar());
+                        Habitacion habitacionActual = obtenerHabitacion(codHabitacionActual);
                         Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacionActual);
                         int posicion = habitacionesAdyacentes.localizar(habitacion);
                         if (posicion != -1) {
@@ -484,10 +489,10 @@ public class Juego
                 System.out.print("Ingrese código de habitación: ");
                 int codigoHabitacion = scan.nextInt();
                 Equipo equipo = equipos.get(nombreEquipo);
-                Habitacion habitacion = obtenerHabitacion(codigoHabitacion, habitaciones.listar());
+                Habitacion habitacion = obtenerHabitacion(codigoHabitacion);
                 if (equipo != null && habitacion != null) {
                         int codHabitacionActual = equipo.getHabitacionActual();
-                        Habitacion habitacionActual = obtenerHabitacion(codHabitacionActual, habitaciones.listar());
+                        Habitacion habitacionActual = obtenerHabitacion(codHabitacionActual);
                         Lista habitacionesAdyacentes = casona.listarAdyacentes(habitacionActual);
                         int posicion = habitacionesAdyacentes.localizar(habitacion);
                         if (posicion != -1) {
@@ -517,7 +522,7 @@ public class Juego
                 String nombreEquipo = scan.nextLine().trim();
                 Equipo equipo = equipos.get(nombreEquipo);
                 if (equipo != null) {
-                        Habitacion habitacionActual = obtenerHabitacion(equipo.getHabitacionActual(), habitaciones.listar());
+                        Habitacion habitacionActual = obtenerHabitacion(equipo.getHabitacionActual());
                         if (habitacionActual.tieneSalida()) {
                                 if (equipo.getPuntajeAcumulado() >= equipo.getPuntajeExigido()) {
                                         System.out.println("¡Felicitaciones! El equipo " + nombreEquipo + " puede salir!");
@@ -555,7 +560,7 @@ public class Juego
         {
                 System.out.print("Ingrese código: ");
                 int codigo = scan.nextInt();
-                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                Habitacion habitacion = obtenerHabitacion(codigo);
                 if (habitacion != null && !habitacion.tieneSalida()) {
                         habitaciones.eliminar(habitacion);
                         casona.eliminarVertice(habitacion);
@@ -571,7 +576,7 @@ public class Juego
         {
                 System.out.print("Ingrese código: ");
                 int codigo = scan.nextInt();
-                Habitacion habitacion = obtenerHabitacion(codigo, habitaciones.listar());
+                Habitacion habitacion = obtenerHabitacion(codigo);
                 if (habitacion != null && !habitacion.tieneSalida()) {
                         short opcion;
                         do {
@@ -617,7 +622,7 @@ public class Juego
                                                 System.out.print("Ingrese código de habitación contigua: ");
                                                 int codigoHabitacionContigua = scan.nextInt();
                                                 if (codigoHabitacionContigua != codigo) {
-                                                        Habitacion habitacionContigua = obtenerHabitacion(codigoHabitacionContigua, habitaciones.listar());
+                                                        Habitacion habitacionContigua = obtenerHabitacion(codigoHabitacionContigua);
                                                         if (habitacionContigua != null && !habitacionContigua.tieneSalida()) {
                                                                 System.out.print("Ingrese puntaje requerido: ");
                                                                 int puntajeRequerido = scan.nextInt();
@@ -641,7 +646,7 @@ public class Juego
                                         case 5:
                                                 System.out.print("Ingrese código de habitación contigua: ");
                                                 int codigoHabitContigua = scan.nextInt();
-                                                Habitacion habitContigua = obtenerHabitacion(codigoHabitContigua, habitaciones.listar());
+                                                Habitacion habitContigua = obtenerHabitacion(codigoHabitContigua);
                                                 if (habitContigua != null && !habitContigua.tieneSalida()) {
                                                         boolean exito1 = casona.eliminarArco(habitacion, habitContigua);
                                                         boolean exito2 = casona.eliminarArco(habitContigua, habitacion);
