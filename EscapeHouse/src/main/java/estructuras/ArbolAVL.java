@@ -380,8 +380,8 @@ public class ArbolAVL implements Cloneable
         private boolean perteneceAux(NodoAVL unNodo, Comparable unElemento)
         {
                 boolean exito = false;
-                int comparacion = unElemento.compareTo(unNodo.getElemento());
                 if (unNodo != null) {
+                        int comparacion = unElemento.compareTo(unNodo.getElemento());
                         if (comparacion == 0) {
                                 // El elemento en el nodo actual coincide con el buscado
                                 exito = true;
