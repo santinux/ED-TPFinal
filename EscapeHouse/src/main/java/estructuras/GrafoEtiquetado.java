@@ -30,8 +30,8 @@ public class GrafoEtiquetado
         {
                 boolean exito = false;
                 if (this.inicio != null) {
-                        // Almacenar adyacentes para luego eliminar arcos asociados
-                        Lista adyacentes = listarAdyacentes(unElemento);
+                        // Eliminar la referencia a este vértice de cada vértice que lo tenga como adyacente
+                        eliminarAdyacentes(unElemento);
                         if (this.inicio.getElemento().equals(unElemento)) {
                                 // El elemento está en el vértice inicial
                                 this.inicio = this.inicio.getSiguienteVertice();
@@ -43,13 +43,6 @@ public class GrafoEtiquetado
                                         // Enlazar el nodo "padre" con el nodo "hijo" del nodo contenedor del elemento
                                         nodoPadre.setSiguienteVertice(nodoPadre.getSiguienteVertice().getSiguienteVertice());
                                         exito = true;
-                                }
-                        }
-                        if (exito) {
-                                // Eliminar los arcos asociados al vértice
-                                while (!adyacentes.esVacia()) {
-                                        eliminarArco(adyacentes.recuperar(1), unElemento);
-                                        adyacentes.eliminar(1);
                                 }
                         }
                 }
@@ -131,6 +124,48 @@ public class GrafoEtiquetado
                         exito = true;
                 }
                 return (exito);
+        }
+        
+        /**
+         * Itera sobre los nodos adyacentes del nodo con el elemento indicado,
+         * para cada adyacente accede al vértice asociado y en cada uno itera
+         * sobre sus nodos adyacentes para eliminar el adyacente que coincida con
+         * el elemento indicado.
+         * Se garantiza el funcionamiento en el dominio del sistema EscapeHouse,
+         * ya que se crean ambos arcos entre las habitaciones (no se modifica
+         * el método insertarArco para hacer la doble inserción automáticamente
+         * para mantener la consistencia del UML GrafoEtiquetado).
+         *
+         * @param unElemento El elemento del nodo que se quiere eliminar.
+         */
+        private void eliminarAdyacentes(Object unElemento)
+        {
+                NodoVertice nodoEncontrado = obtenerNodoVertice(this.inicio, unElemento);
+                if (nodoEncontrado != null) {
+                        NodoAdyacente adyacentePrimario = nodoEncontrado.getPrimerAdyacente();
+                        // Iterar sobre todos los adyacentes del nodo
+                        while (adyacentePrimario != null) {
+                                NodoVertice vertice = adyacentePrimario.getVertice();
+                                NodoAdyacente adyacenteSecundario = vertice.getPrimerAdyacente();
+                                if (adyacenteSecundario.getVertice().getElemento().equals(unElemento)) {
+                                        // El adyacente a eliminar es el primer adyacente del nodo
+                                        vertice.setPrimerAdyacente(adyacenteSecundario.getSiguienteAdyacente());
+                                } else {
+                                        boolean eliminado = false;
+                                        // Buscar el adyacente padre del adyacente a eliminar
+                                        while (!eliminado && adyacenteSecundario != null) {
+                                                if (adyacenteSecundario.getSiguienteAdyacente() != null) {
+                                                        if (adyacenteSecundario.getSiguienteAdyacente().getVertice().getElemento().equals(unElemento)) {
+                                                                adyacenteSecundario.setSiguienteAdyacente(adyacenteSecundario.getSiguienteAdyacente().getSiguienteAdyacente());
+                                                                eliminado = true;
+                                                        }
+                                                }
+                                                adyacenteSecundario = adyacenteSecundario.getSiguienteAdyacente();
+                                        }
+                                }
+                                adyacentePrimario = adyacentePrimario.getSiguienteAdyacente();
+                        }
+                }
         }
         
         private NodoAdyacente obtenerNodoAdyacentePadre(NodoAdyacente unAdyacente, Object unVerticeDestino)
