@@ -189,6 +189,8 @@ public class ArbolAVL implements Cloneable
                 }
                 if (candidato.getHijoIzquierdo() != null) {
                         caso3Eliminar(raiz, nodo, candidato);
+                        // Balancear el nodo actual después de la llamada recursiva
+                        balancear(balance(candidato), candidato, nodo);
                 } else {
                         raiz.setElemento(candidato.getElemento());
                         NodoAVL derecho = candidato.getHijoDerecho();
@@ -198,6 +200,9 @@ public class ArbolAVL implements Cloneable
                                 padre.setHijoIzquierdo(derecho);
                         }
                 }
+                // Recalcular alturas después de posibles rotaciones
+                if (nodo != null)
+                        nodo.recalcularAltura();
                 raiz.recalcularAltura();
                 padre.recalcularAltura();
         }
